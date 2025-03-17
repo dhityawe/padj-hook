@@ -103,4 +103,12 @@ public class Enemy : MonoBehaviour
         waypoint.parent = transform;
         EnemyPool.DestroyEnemy(this);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            EnemyKill();       //** CHANGES MADE HERE !!! - Enemy died when collide to player collider**//
+        }
+    }
 }

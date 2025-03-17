@@ -80,20 +80,22 @@ public class HookMechanic : MonoBehaviour
 
     private IEnumerator SnapToEnemy()
     {
-        Vector3 enemyPos = hookedEnemy.position;
-        float time = 0f;
-        float duration = 0.1f; 
+        if (hookedEnemy == null) yield break;
 
-        while (time < duration)
+        Vector3 enemyPos = hookedEnemy.position;
+        Vector2 direction = (enemyPos - transform.position).normalized;
+        hookRb.velocity = direction * hookDataProvider.HookSpeed;
+
+        while (Vector2.Distance(transform.position, enemyPos) > 0.1f)
         {
-            time += Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, enemyPos, time / duration);
             yield return null;
         }
 
+        hookRb.velocity = Vector2.zero; // Stop the hook
         hookedEnemy = null;
         StartCoroutine(SmoothReturn(hookDataProvider.HookPoint.position));
     }
+
 
     private IEnumerator SmoothReturn(Vector3 targetPos)
     {
@@ -117,11 +119,7 @@ public class HookMechanic : MonoBehaviour
         gameObject.SetActive(false);
         isHooking = false;  
 
-        if (enemy != null)
-        {
-            enemy.EnemyKill();
-            enemy = null;
-        }
+        //** CHANGES MADE HERE !!! - Enemy does not longer die here**//
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
