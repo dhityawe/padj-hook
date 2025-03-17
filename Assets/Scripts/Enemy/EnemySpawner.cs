@@ -41,5 +41,8 @@ public class EnemySpawner : MonoBehaviour
         enemy.SetSpeed(Random.Range(1f, 3f));
         enemy.transform.position = spawnPoint.position;
         enemy.GetWaypoint().position = waypoint.position;
+        
+        enemy.SetWaypointParent(waypoint);
+        enemy.transform.parent = transform;
     }
 }

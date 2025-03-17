@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
 
     private bool isHooked = false;
 
+    private Transform waypointParent;
+
     public void SetWaypoint(Transform waypoint)
     {
         this.waypoint = waypoint;
@@ -31,6 +33,12 @@ public class Enemy : MonoBehaviour
         return waypoint;
     }
 
+    public void SetWaypointParent(Transform waypointParent)
+    {
+        this.waypointParent = waypointParent;
+        waypoint.parent = waypointParent;
+    }
+
     public float GetSpeed()
     {
         return speed;
@@ -38,7 +46,16 @@ public class Enemy : MonoBehaviour
 
     public void OnSpawn()
     {
-        waypoint.parent = null;
+        if (waypointParent != null)
+        {
+            waypoint.parent = waypointParent;
+        }
+
+        else
+        {
+            waypoint.parent = null;
+        }
+
         isHooked = false;
     }
 
@@ -83,6 +100,7 @@ public class Enemy : MonoBehaviour
 
     public void EnemyKill()
     {
+        waypoint.parent = transform;
         EnemyPool.DestroyEnemy(this);
     }
 }
