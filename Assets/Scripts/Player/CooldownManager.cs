@@ -9,7 +9,7 @@ public class CooldownManager : MonoBehaviour
     private PlayerBaseStats playerStats;
 
     public static CooldownManager Instance { get; private set; }
-    public event Action<string, float> OnCooldownStart;
+    public event Action<string, float, float> OnCooldownStart; // CHANGES
 
     private void Awake()
     {
@@ -48,7 +48,7 @@ public class CooldownManager : MonoBehaviour
         Debug.Log($"{action} cooldown started! Ends in {cooldownDuration} seconds.");
         
         // Notify UI immediately
-        OnCooldownStart?.Invoke(action, cooldownDuration);
+        OnCooldownStart?.Invoke(action, cooldownDuration, cooldownDuration); // CHANGES
 
         // Start coroutine to track cooldown
         StartCoroutine(UpdateCooldown(action, cooldownDuration));
@@ -64,13 +64,13 @@ public class CooldownManager : MonoBehaviour
             float remainingTime = duration - elapsedTime;
 
             // Notify UI every frame
-            OnCooldownStart?.Invoke(action, remainingTime); 
+            OnCooldownStart?.Invoke(action, remainingTime, duration); // CHANGES
             
             yield return null; // Wait for next frame
         }
 
         // Ensure UI reaches 0 at the end
-        OnCooldownStart?.Invoke(action, 0f);
+        OnCooldownStart?.Invoke(action, 0f, duration); // CHANGES
     }
 
 

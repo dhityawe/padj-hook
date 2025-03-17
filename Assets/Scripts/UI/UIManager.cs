@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class UIManager : MonoBehaviour
 {
@@ -36,41 +37,32 @@ public class UIManager : MonoBehaviour
         eatCooldownSlider.value = 0;
     }
 
-    private void HandleCooldownStart(string skillName, float duration)
+    private void HandleCooldownStart(string skillName, float currentTime, float duration)
     {
         if (skillName == "Hook")
         {        
-            if (hookCooldownCoroutine != null)
-                {
-                    StopCoroutine(hookCooldownCoroutine);
-                }
-            hookCooldownCoroutine = StartCoroutine(UpdateCooldown(hookCooldownSlider, duration));
+            hookCooldownSlider.value = Mathf.Lerp(0, 1, currentTime / duration);
         }
+
         else if (skillName == "Eat")
         {
-            if (eatCooldownCoroutine != null)
-            {
-                StopCoroutine(eatCooldownCoroutine);
-            }
-            eatCooldownCoroutine = StartCoroutine(UpdateCooldown(eatCooldownSlider, duration));
+            eatCooldownSlider.value = Mathf.Lerp(0, 1, currentTime / duration);
         }
     }
 
     private IEnumerator UpdateCooldown(Slider cooldownSlider, float cooldownTime)
     {
-        cooldownSlider.value = 1f; // Ensure it starts at full value
-        yield return null; // Allow UI to update
+        cooldownSlider.value = 1;
+        float currentTime = cooldownTime;
 
-        int steps = 10; // Always exactly 10 steps
-        float decrementAmount = 1f / steps; // Fixed decrease per step (0.1)
-        float decrementInterval = cooldownTime / steps; // Time between each decrement
-
-        for (int i = 1; i <= steps; i++) // Ensure exactly 10 updates
+        while (currentTime > 0)
         {
-            yield return new WaitForSeconds(decrementInterval); // Wait for the interval
-            cooldownSlider.value = 1f - (decrementAmount * i); // Decrease in fixed steps
+            currentTime -= Time.deltaTime;
+            cooldownSlider.value = Mathf.Lerp(0, 1, currentTime / cooldownTime);
+            //Debug.Log(Mathf.Lerp(0, 1, currentTime / cooldownTime));
+            yield return null;
         }
 
-        cooldownSlider.value = 0f; // Ensure it reaches exactly 0
+        cooldownSlider.value = 0;
     }
 }
