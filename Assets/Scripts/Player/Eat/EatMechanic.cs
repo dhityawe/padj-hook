@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class EatMechanic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            enemy.EnemyKill();
+            Debug.Log("You Eat enemy");
+        }
     }
 }
