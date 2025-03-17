@@ -31,8 +31,9 @@ public class PlayerInput : MonoBehaviour
             Debug.Log("Hook Toggle Off!");
         }
 
-        if (HookMechanic.toggleHook && Input.GetMouseButtonDown(0))
+        if (HookMechanic.toggleHook && Input.GetMouseButtonDown(0) && CanUseHook())
         {
+            Debug.Log("Hooking Pressed!");
             OnHookPressed?.Invoke();
         }
 
@@ -44,7 +45,6 @@ public class PlayerInput : MonoBehaviour
 
     private bool CanUseHook()
     {
-        if (playerActions == null) return false;
-        return Time.time - playerActions.LastHookTime >= playerActions.HookCooldown;
+        return CooldownManager.Instance.GetRemainingCooldown("Hook") <= 0;
     }
 }

@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HookMechanic : MonoBehaviour
@@ -10,7 +10,6 @@ public class HookMechanic : MonoBehaviour
     private Enemy enemy;
     public static bool isHooking = false;
     public static bool toggleHook = false;
-    private bool isOnCooldown = false;
 
     [SerializeField] private PlayerInput playerInput; // Manually assign in Inspector
 
@@ -26,9 +25,7 @@ public class HookMechanic : MonoBehaviour
     }
 
     public void HookEntity()
-    {
-        if (isHooking || isOnCooldown || hookDataProvider == null) return;
-        
+    {        
         isHooking = true;
         playerInput.hookSkill.SetActive(false);
 
@@ -96,12 +93,10 @@ public class HookMechanic : MonoBehaviour
         StartCoroutine(SmoothReturn(hookDataProvider.HookPoint.position));
     }
 
-
     private IEnumerator SmoothReturn(Vector3 targetPos)
     {
+        float duration = 0.5f;
         Vector3 startPos = transform.position;
-        float distance = Vector3.Distance(startPos, targetPos);
-        float duration = distance / hookDataProvider.HookSpeed;
         float time = 0f;
 
         while (time < duration)
@@ -117,24 +112,17 @@ public class HookMechanic : MonoBehaviour
     private void ResetHook()
     {
         gameObject.SetActive(false);
-        isHooking = false;  
-
-        //** CHANGES MADE HERE !!! - Enemy does not longer die here**//
+        isHooking = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            if (hookedEnemy == null)
-            {
-                enemy = collision.GetComponent<Enemy>();
-                enemy.Hook(this.transform, hookDataProvider.HookPoint.position);
-            }
-
             hookedEnemy = collision.transform;
-
-            ReturnHookSmoothly();
+            enemy = hookedEnemy.GetComponent<Enemy>();
+            Vector2 direction = (hookedEnemy.position - transform.position).normalized;
+            enemy.Hook(transform, direction);
         }
     }
 }

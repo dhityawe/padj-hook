@@ -6,15 +6,15 @@ public class HookAim : MonoBehaviour
     private Vector3 mousePos;
     private LineRenderer lineRenderer;
 
-    [SerializeField] private PlayerActions playerActions; // Manually assign in Inspector
+    [SerializeField] private PlayerBaseStats playerBaseStats; // Manually assign in Inspector
 
     void Start()
     {
         mainCam = Camera.main;
 
-        if (playerActions == null)
+        if (playerBaseStats == null)
         {
-            Debug.LogError("PlayerActions is not assigned! Assign it manually in the Inspector.");
+            Debug.LogError("playerBaseStats is not assigned! Assign it manually in the Inspector.");
             return;
         }
 
@@ -39,7 +39,7 @@ public class HookAim : MonoBehaviour
 
     void Update()
     {
-        if (playerActions == null) return; // Prevent errors if PlayerActions is missing
+        if (playerBaseStats == null) return; // Prevent errors if playerBaseStats is missing
         DrawHookArea();
         DrawHookRange();
     }
@@ -55,8 +55,8 @@ public class HookAim : MonoBehaviour
 
     private void DrawHookRange()
     {
-        float radius = playerActions.HookRange; // Get hook range from manually assigned PlayerActions
-        Vector3 center = playerActions.transform.position; // Center on player position
+        float radius = playerBaseStats.HookRange; // Get hook range from manually assigned playerBaseStats
+        Vector3 center = playerBaseStats.transform.position; // Center on player position
 
         for (int i = 0; i < lineRenderer.positionCount; i++)
         {

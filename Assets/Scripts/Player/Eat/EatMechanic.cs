@@ -1,14 +1,54 @@
 using UnityEngine;
+using System.Collections;
 
 public class EatMechanic : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D collision)
+    private IEatDataProvider eatDataProvider;
+    private Collider2D eatCollider;
+    private bool isEating = false;
+
+    private void Start()
+    {
+        eatDataProvider = GetComponentInParent<IEatDataProvider>(); // Get stats from PlayerBaseStats
+        eatCollider = GetComponent<Collider2D>();
+
+        PlayerInput playerInput = GetComponentInParent<PlayerInput>(); // Get input reference
+        if (playerInput != null)
+        {
+            playerInput.OnEatPressed += EatEntity; // Subscribe to Eat event
+        }
+
+        eatCollider.enabled = false; // Disable collider initially
+    }
+
+    public void EatEntity()
+    {
+        if (isEating) return;
+
+        isEating = true;
+        StartCoroutine(EatRoutine());
+    }
+
+    private IEnumerator EatRoutine()
+    {
+        eatCollider.enabled = true; // Enable eat detection
+        yield return new WaitForSeconds(0.2f); // Small window to detect collision
+        eatCollider.enabled = false;
+
+        yield return new WaitForSeconds(eatDataProvider.EatCooldown); // Cooldown before next eat
+        isEating = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
-            enemy.EnemyKill();
-            Debug.Log("You Eat enemy");
+            if (enemy != null)
+            {
+                enemy.EnemyKill(); // Kill enemy
+                Debug.Log("You ate an enemy!");
+            }
         }
     }
 }

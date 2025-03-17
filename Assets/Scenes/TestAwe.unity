@@ -131,8 +131,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 119898985}
+  - component: {fileID: 119898991}
   - component: {fileID: 119898987}
   - component: {fileID: 119898986}
+  - component: {fileID: 119898990}
   - component: {fileID: 119898989}
   - component: {fileID: 119898988}
   m_Layer: 0
@@ -173,16 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1228bc71aaba4848853a9ccae35b52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hookRange: 5
-  hookSpeed: 10
-  hookCooldown: 3
-  hookPoint: {fileID: 1387750050}
-  hookObject: {fileID: 1547569916}
-  eatArea: {fileID: 1918392750}
-  eatRange: 5
-  eatCooldown: 1
-  eatAnimator: {fileID: 0}
-  playerAnimator: {fileID: 0}
 --- !u!114 &119898987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +260,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &119898990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119898984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97420c901a785f04ca9d8963b65af057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &119898991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119898984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38610e82b24c5144fbde2639e46d77ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hookRange: 5
+  hookSpeed: 10
+  hookCooldown: 2
+  hookPoint: {fileID: 1387750050}
+  eatCooldown: 1
 --- !u!1 &130520117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b47adeab132f4784d6915eee43387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerActions: {fileID: 119898986}
+  playerBaseStats: {fileID: 119898991}
 --- !u!1 &1864420414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,7 +1284,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918392750}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
