@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class HookMechanic : MonoBehaviour
     private IHookDataProvider hookDataProvider;
     private Rigidbody2D hookRb;
     private Transform hookedEnemy = null;
+    private Enemy enemy;
     public static bool isHooking = false;
     public static bool toggleHook = false;
     private bool isOnCooldown = false;
@@ -113,14 +115,27 @@ public class HookMechanic : MonoBehaviour
     private void ResetHook()
     {
         gameObject.SetActive(false);
-        isHooking = false;
+        isHooking = false;  
+
+        if (enemy != null)
+        {
+            enemy.EnemyKill();
+            enemy = null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
+            if (hookedEnemy == null)
+            {
+                enemy = collision.GetComponent<Enemy>();
+                enemy.Hook(this.transform, hookDataProvider.HookPoint.position);
+            }
+
             hookedEnemy = collision.transform;
+
             ReturnHookSmoothly();
         }
     }
