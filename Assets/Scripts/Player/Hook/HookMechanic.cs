@@ -67,7 +67,7 @@ public class HookMechanic : MonoBehaviour
     {
         if (hookedEnemy != null)
         {
-            StartCoroutine(SnapToEnemy());
+            StartCoroutine(SnapToEnemyCoroutine());
         }
         else
         {
@@ -75,7 +75,7 @@ public class HookMechanic : MonoBehaviour
         }
     }
 
-    private IEnumerator SnapToEnemy()
+    private IEnumerator SnapToEnemyCoroutine()
     {
         if (hookedEnemy == null) yield break;
 
@@ -123,6 +123,10 @@ public class HookMechanic : MonoBehaviour
             enemy = hookedEnemy.GetComponent<Enemy>();
             Vector2 direction = (hookedEnemy.position - transform.position).normalized;
             enemy.Hook(transform, direction);
+
+            // Start coroutine and wait for it to finish before resetting hookedEnemy
+            StartCoroutine(SnapToEnemyCoroutine());
         }
     }
+
 }
