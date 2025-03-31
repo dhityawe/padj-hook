@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77fafcc6bd2ee94ebe9ac341b986e7a, type: 3}
+  m_Name: Soul
+  m_EditorClassIdentifier: 
+  SpriteAnimations:
+  - Name: Move
+    FPS: 5
+    Frames:
+    - {fileID: 74503743, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: -122617972, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    SpriteAnimationType: 0
+  - Name: Hooked
+    FPS: 5
+    Frames:
+    - {fileID: -1447618038, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: 1250600947, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: -1936009917, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: 464957447, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: -1939112819, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: 1665217678, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: -116783147, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: 881871503, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    SpriteAnimationType: 0
+  - Name: Dead
+    FPS: 5
+    Frames:
+    - {fileID: 446441651, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: 1578803629, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: -2125579384, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    - {fileID: -1671987501, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
+    SpriteAnimationType: 0

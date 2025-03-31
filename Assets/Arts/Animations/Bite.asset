@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77fafcc6bd2ee94ebe9ac341b986e7a, type: 3}
+  m_Name: Bite
+  m_EditorClassIdentifier: 
+  SpriteAnimations:
+  - Name: Biting
+    FPS: 12
+    Frames:
+    - {fileID: -1967370494, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
+    - {fileID: 1219606254, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
+    - {fileID: -639410326, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
+    - {fileID: 510857201, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
+    - {fileID: -619822221, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
+    - {fileID: -559756128, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
+    SpriteAnimationType: 1
