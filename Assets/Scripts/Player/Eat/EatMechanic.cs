@@ -1,11 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using GabrielBigardi.SpriteAnimator;
 
 public class EatMechanic : MonoBehaviour
 {
     private IEatDataProvider eatDataProvider;
     private Collider2D eatCollider;
     private bool isEating = false;
+
+    [Header("Reference")]
+    public SpriteAnimator eatAnimator;
 
     private void Start()
     {
@@ -24,7 +28,7 @@ public class EatMechanic : MonoBehaviour
     public void EatEntity()
     {
         if (isEating) return;
-
+        eatAnimator.Play("Biting"); // Play eat animation
         isEating = true;
         StartCoroutine(EatRoutine());
     }

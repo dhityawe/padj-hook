@@ -1,10 +1,13 @@
 using UnityEngine;
+using GabrielBigardi.SpriteAnimator;
 
 public class PlayerActions : MonoBehaviour
 {
     private PlayerInput playerInput;
     private HookMechanic hookMechanic;
     private EatMechanic eatMechanic;
+
+    [Header("Reference")]
     private CooldownManager cooldownManager;
     private PlayerBaseStats playerBaseStats;
 

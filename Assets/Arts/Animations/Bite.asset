@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteAnimations:
   - Name: Biting
-    FPS: 12
+    FPS: 14
     Frames:
     - {fileID: -1967370494, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
     - {fileID: 1219606254, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
@@ -22,4 +22,5 @@ MonoBehaviour:
     - {fileID: 510857201, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
     - {fileID: -619822221, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
     - {fileID: -559756128, guid: 653b87267b616514d92e259e71d82ae0, type: 3}
+    - {fileID: 21300000, guid: 3e0ab1965ef69964fb12c4e5ae5ca799, type: 3}
     SpriteAnimationType: 1

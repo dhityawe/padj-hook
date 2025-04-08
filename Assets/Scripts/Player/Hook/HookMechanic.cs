@@ -1,6 +1,6 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
+using GabrielBigardi.SpriteAnimator;
 
 public class HookMechanic : MonoBehaviour
 {
@@ -11,6 +11,9 @@ public class HookMechanic : MonoBehaviour
     public static bool isHooking = false;
     public static bool toggleHook = false;
 
+    [Header("Reference")]
+    public SpriteAnimator playerAnimator;
+    public SpriteAnimator hookAnimator;
     [SerializeField] private PlayerInput playerInput; // Manually assign in Inspector
 
     private void Awake()
@@ -32,27 +35,27 @@ public class HookMechanic : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
 
-        Vector3 playerPos = hookDataProvider.PlayerPosition;  
+        Vector3 hookPointPos = hookDataProvider.HookPoint.position; // Use HookPoint instead of Player
         float maxRange = hookDataProvider.HookBaseRange;
 
-        float distance = Vector2.Distance(playerPos, mousePos);
+        float distance = Vector2.Distance(hookPointPos, mousePos);
         if (distance > maxRange)
         {
-            Vector2 direction = (mousePos - playerPos).normalized;
-            mousePos = playerPos + (Vector3)direction * maxRange;
+            Vector2 direction = (mousePos - hookPointPos).normalized;
+            mousePos = hookPointPos + (Vector3)direction * maxRange;
         }
 
         gameObject.SetActive(true);
         hookRb.velocity = (mousePos - transform.position).normalized * hookDataProvider.HookSpeed;
 
-        StartCoroutine(CheckHookDistance(playerPos));
+        StartCoroutine(CheckHookDistance(hookPointPos)); // Pass HookPoint position
     }
 
-    private IEnumerator CheckHookDistance(Vector3 playerPos)
+    private IEnumerator CheckHookDistance(Vector3 hookPointPos)
     {
         while (isHooking)
         {
-            float distance = Vector2.Distance(playerPos, transform.position);
+            float distance = Vector2.Distance(hookPointPos, transform.position);
 
             if (distance > hookDataProvider.HookBaseRange)
             {
@@ -62,6 +65,7 @@ public class HookMechanic : MonoBehaviour
             yield return null;
         }
     }
+
 
     private void ReturnHookSmoothly()
     {
