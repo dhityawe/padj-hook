@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using GabrielBigardi.SpriteAnimator;
+using System;
 
 public class HookMechanic : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class HookMechanic : MonoBehaviour
     private Enemy enemy;
     public static bool isHooking = false;
     public static bool toggleHook = false;
+
+    public static Action OnHookEnd;
 
     [Header("Reference")]
     public SpriteAnimator playerAnimator;
@@ -71,10 +74,12 @@ public class HookMechanic : MonoBehaviour
     {
         if (hookedEnemy != null)
         {
+            OnHookEnd?.Invoke();
             StartCoroutine(SnapToEnemyCoroutine());
         }
         else
         {
+            OnHookEnd?.Invoke();
             StartCoroutine(SmoothReturn(hookDataProvider.HookPoint.position));
         }
     }
@@ -123,6 +128,7 @@ public class HookMechanic : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            OnHookEnd?.Invoke();
             hookedEnemy = collision.transform;
             enemy = hookedEnemy.GetComponent<Enemy>();
             Vector2 direction = (hookedEnemy.position - transform.position).normalized;

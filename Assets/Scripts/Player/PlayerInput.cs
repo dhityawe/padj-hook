@@ -47,4 +47,6 @@ public class PlayerInput : MonoBehaviour
     {
         return CooldownManager.Instance.GetRemainingCooldown("Hook") <= 0;
     }
+
+
 }

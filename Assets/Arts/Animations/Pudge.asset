@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77fafcc6bd2ee94ebe9ac341b986e7a, type: 3}
+  m_Name: Pudge
+  m_EditorClassIdentifier: 
+  SpriteAnimations:
+  - Name: Idle
+    FPS: 6
+    Frames:
+    - {fileID: -1925172154, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -591823849, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -989290181, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -857810181, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: 1800526620, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    SpriteAnimationType: 0
+  - Name: Eat
+    FPS: 14
+    Frames:
+    - {fileID: 1037089514, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -111005290, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -1128606659, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -986622095, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -905924055, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -278653325, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    SpriteAnimationType: 1
+  - Name: HookStart
+    FPS: 6
+    Frames:
+    - {fileID: -247737183, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: 1622087657, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: 362342470, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -58317033, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    SpriteAnimationType: 1
+  - Name: HookHit
+    FPS: 6
+    Frames:
+    - {fileID: -58317033, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: 362342470, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: 1622087657, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    - {fileID: -247737183, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
+    SpriteAnimationType: 1
