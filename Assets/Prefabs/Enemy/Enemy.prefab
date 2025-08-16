@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309734e4736072e428bfe4052cc126d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteAnimator: {fileID: 5623558969834872195}
   waypoint: {fileID: 5597343601677629222}
   speed: 1
 --- !u!61 &3235497544541110452

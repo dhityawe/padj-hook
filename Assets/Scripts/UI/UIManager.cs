@@ -1,14 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using Unity.VisualScripting;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Slider hookCooldownSlider;
     [SerializeField] private Slider eatCooldownSlider;
-    Coroutine hookCooldownCoroutine;
-    Coroutine eatCooldownCoroutine;
 
     private void OnEnable()
     {

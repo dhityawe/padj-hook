@@ -38,28 +38,21 @@ public class EatMechanic : MonoBehaviour
     }
 
     private IEnumerator EatRoutine()
-    {
-        eatCollider.enabled = true; // Enable eat detection
-        eatCollider.enabled = false;
-
+    {   
+        StartCoroutine(ColliderRoutine()); // Start collider routine
         yield return new WaitForSeconds(eatDataProvider.EatCooldown); // Cooldown before next eat
         isEating = false;
+    }
+
+    private IEnumerator ColliderRoutine()
+    {
+        eatCollider.enabled = true; // Enable eat detection
+        yield return new WaitForSeconds(0.2f); // Small window to detect collision
+        eatCollider.enabled = false;
     }
 
     private void EatSound()
     {
         AudioManager.Instance.PlaySound(2);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.EnemyKill(); // Kill enemy
-                Debug.Log("You ate an enemy!");
-            }
-        }
     }
 }

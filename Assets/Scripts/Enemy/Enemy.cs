@@ -1,11 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using GabrielBigardi.SpriteAnimator;
 
 public class Enemy : MonoBehaviour
 {
     public static Action OnPlayerCollide;
+    public SpriteAnimator spriteAnimator;
+    private BoxCollider2D boxCollider;
 
     [SerializeField]
     private Transform waypoint;
@@ -50,6 +51,8 @@ public class Enemy : MonoBehaviour
 
     public void OnSpawn()
     {
+        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider.enabled = true;
         if (waypointParent != null)
         {
             waypoint.parent = waypointParent;
@@ -94,8 +97,8 @@ public class Enemy : MonoBehaviour
         if (!isHooked) return;
 
         transform.position = hook.position;
+        // spriteAnimator.Play("Hooked");
         EnemyHookedSound();
-        
     }
 
     public void Hook(Transform hook, Vector2 playerPosition)
@@ -108,7 +111,6 @@ public class Enemy : MonoBehaviour
     public void EnemyKill()
     {
         waypoint.parent = transform;
-        EnemyDeadSound();
         EnemyPool.DestroyEnemy(this);
     }
 
@@ -117,7 +119,36 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             OnPlayerCollide?.Invoke();
-            EnemyKill();       //** CHANGES MADE HERE !!! - Enemy died when collide to player collider**//
+            PlayDeathAnimation();
+        }
+
+        if (collision.CompareTag("EatArea"))
+        {
+            OnPlayerCollide?.Invoke();
+            PlayDeathAnimation();
+        }
+    }
+
+    public void PlayDeathAnimation()
+    {
+        // disable collider
+        boxCollider.enabled = false;
+
+        // Play death animation and wait for it to complete before calling EnemyKill
+        if (spriteAnimator != null && spriteAnimator.HasAnimation("Dead"))
+        {
+            EnemyDeadSound();
+            spriteAnimator.Play("Dead").SetOnComplete(() =>
+            {
+                // Death animation completed, now kill the enemy
+                EnemyKill();
+            });
+        }
+        else
+        {
+            // If no death animation exists, just kill immediately
+            Debug.LogWarning("No 'Dead' animation found, killing enemy immediately");
+            EnemyKill();
         }
     }
 
@@ -127,7 +158,7 @@ public class Enemy : MonoBehaviour
         // Only play the sound once per enemy
         if (soundPlayed) return;
         soundPlayed = true;
-        
+
         // play the hook sound once
         AudioManager.Instance.PlaySound(5);
     }
