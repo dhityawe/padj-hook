@@ -120,6 +120,7 @@ public class HookMechanic : MonoBehaviour
 
     private void ResetHook()
     {
+        toggleHook = false;
         gameObject.SetActive(false);
         isHooking = false;
     }

@@ -37,7 +37,7 @@ public class PlayerInput : MonoBehaviour
             OnHookPressed?.Invoke();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) )
         {
             OnEatPressed?.Invoke();
         }

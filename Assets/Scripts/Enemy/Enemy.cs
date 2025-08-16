@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static Action OnPlayerCollide;
+
     [SerializeField]
     private Transform waypoint;
 
@@ -15,6 +18,7 @@ public class Enemy : MonoBehaviour
     private Vector2 playerPosition;
 
     private bool isHooked = false;
+    private bool soundPlayed = false;
 
     private Transform waypointParent;
 
@@ -57,6 +61,7 @@ public class Enemy : MonoBehaviour
         }
 
         isHooked = false;
+        soundPlayed = false;
     }
 
     private void Awake()
@@ -89,6 +94,8 @@ public class Enemy : MonoBehaviour
         if (!isHooked) return;
 
         transform.position = hook.position;
+        EnemyHookedSound();
+        
     }
 
     public void Hook(Transform hook, Vector2 playerPosition)
@@ -101,6 +108,7 @@ public class Enemy : MonoBehaviour
     public void EnemyKill()
     {
         waypoint.parent = transform;
+        EnemyDeadSound();
         EnemyPool.DestroyEnemy(this);
     }
 
@@ -108,7 +116,25 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            OnPlayerCollide?.Invoke();
             EnemyKill();       //** CHANGES MADE HERE !!! - Enemy died when collide to player collider**//
         }
     }
+
+    #region Sound Methods
+    private void EnemyHookedSound()
+    {
+        // Only play the sound once per enemy
+        if (soundPlayed) return;
+        soundPlayed = true;
+        
+        // play the hook sound once
+        AudioManager.Instance.PlaySound(5);
+    }
+
+    private void EnemyDeadSound()
+    {
+        AudioManager.Instance.PlaySound(4);
+    }
+    #endregion
 }

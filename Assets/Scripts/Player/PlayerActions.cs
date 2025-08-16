@@ -15,11 +15,15 @@ public class PlayerActions : MonoBehaviour
     private void OnEnable()
     {
         HookMechanic.OnHookEnd += HookHitAnimation;
+        Enemy.OnPlayerCollide += PlayerHurtSound;
+        EatMechanic.onEating += EatAnimation;
     }
 
     private void OnDisable()
     {
         HookMechanic.OnHookEnd -= HookHitAnimation;
+        Enemy.OnPlayerCollide -= PlayerHurtSound;
+        EatMechanic.onEating -= EatAnimation;
     }
 
     void Start()
@@ -54,25 +58,50 @@ public class PlayerActions : MonoBehaviour
 
         cooldownManager.StartCooldown("Eat");
         eatMechanic?.EatEntity();
-        EatAnimation();
     }
 
 
-    
+
     #region Animation
     private void HookAnimation()
     {
-        spriteAnimator.Play("HookStart");
+        // Wait for animation to end naturally, then play idle
+        spriteAnimator.Play("HookStart").SetOnComplete(() => {
+            // Animation completed, now play idle animation
+            spriteAnimator.Play("Idle");
+        });
+        
+        HookOutSound();
     }
 
     private void HookHitAnimation()
     {
         spriteAnimator.Play("HookHit");
+        HookHitSound();
     }
 
     private void EatAnimation()
     {
         spriteAnimator.Play("Eat");
     }
+
     #endregion
+
+    #region Sound
+    private void HookOutSound()
+    {
+        AudioManager.Instance.PlaySound(0);
+    }
+
+    private void HookHitSound()
+    {
+        AudioManager.Instance.PlaySound(1);
+    }
+
+    private void PlayerHurtSound()
+    {
+        AudioManager.Instance.PlaySound(3);
+    }
+    #endregion
+
 }
