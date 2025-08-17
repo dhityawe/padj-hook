@@ -160,7 +160,7 @@ public class Enemy : MonoBehaviour
         soundPlayed = true;
 
         // play the hook sound once
-        AudioManager.Instance.PlaySound(5);
+        AudioManager.Instance.PlaySound(5, 0.5f);
     }
 
     private void EnemyDeadSound()

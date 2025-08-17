@@ -23,6 +23,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        PlayMusic(8, 0.8f, true); // Play the first music track at start
+    }
+
     public void PlayMusic(int index, float volume = 1.0f, bool loop = true)
     {
         if (index < 0 || index >= audioClips.Length) return;
@@ -34,14 +39,14 @@ public class AudioManager : MonoBehaviour
         audioClips[index].audio = EazySoundManager.GetAudio(audioID);
     }
 
-    public void PlaySound(int index)
+    public void PlaySound(int index, float volume = 1.0f)
     {
         if (index < 0 || index >= audioClips.Length) return;
         
         AudioClip clip = audioClips[index].audioClip;
         if (clip == null) return;
 
-        int audioID = EazySoundManager.PlaySound(clip, 1.0f);
+        int audioID = EazySoundManager.PlaySound(clip, volume);
         audioClips[index].audio = EazySoundManager.GetAudio(audioID);
     }
 

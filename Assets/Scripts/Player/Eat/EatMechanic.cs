@@ -53,6 +53,6 @@ public class EatMechanic : MonoBehaviour
 
     private void EatSound()
     {
-        AudioManager.Instance.PlaySound(2);
+        AudioManager.Instance.PlaySound(2, 0.6f); // Play eating sound
     }
 }

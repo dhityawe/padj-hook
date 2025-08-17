@@ -90,17 +90,17 @@ public class PlayerActions : MonoBehaviour
     #region Sound
     private void HookOutSound()
     {
-        AudioManager.Instance.PlaySound(0);
+        AudioManager.Instance.PlaySound(0, 0.3f);
     }
 
     private void HookHitSound()
     {
-        AudioManager.Instance.PlaySound(1);
+        AudioManager.Instance.PlaySound(1, 0.3f);
     }
 
     private void PlayerHurtSound()
     {
-        AudioManager.Instance.PlaySound(3);
+        AudioManager.Instance.PlaySound(3, 0.8f);
     }
     #endregion
 
