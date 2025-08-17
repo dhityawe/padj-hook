@@ -24,6 +24,6 @@ public class PlayerBaseStats : MonoBehaviour, IHookDataProvider, IEatDataProvide
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, hookRange);
+        Gizmos.DrawWireSphere(HookPoint.transform.position, hookRange);
     }
 }

@@ -7,6 +7,7 @@ public class HookAim : MonoBehaviour
     private LineRenderer lineRenderer;
 
     [SerializeField] private PlayerBaseStats playerBaseStats; // Manually assign in Inspector
+    [SerializeField] private Transform hookPoint; // Manually assign HookPoint
 
     void Start()
     {
@@ -15,6 +16,12 @@ public class HookAim : MonoBehaviour
         if (playerBaseStats == null)
         {
             Debug.LogError("playerBaseStats is not assigned! Assign it manually in the Inspector.");
+            return;
+        }
+
+        if (hookPoint == null)
+        {
+            Debug.LogError("hookPoint is not assigned! Assign it manually in the Inspector.");
             return;
         }
 
@@ -39,7 +46,7 @@ public class HookAim : MonoBehaviour
 
     void Update()
     {
-        if (playerBaseStats == null) return; // Prevent errors if playerBaseStats is missing
+        if (playerBaseStats == null || hookPoint == null) return; // Prevent errors
         DrawHookArea();
         DrawHookRange();
     }
@@ -55,8 +62,10 @@ public class HookAim : MonoBehaviour
 
     private void DrawHookRange()
     {
-        float radius = playerBaseStats.HookRange; // Get hook range from manually assigned playerBaseStats
-        Vector3 center = playerBaseStats.transform.position; // Center on player position
+        if (hookPoint == null) return;
+
+        float radius = playerBaseStats.HookRange;
+        Vector3 center = hookPoint.position; // Ensure it uses HookPoint
 
         for (int i = 0; i < lineRenderer.positionCount; i++)
         {
@@ -65,4 +74,5 @@ public class HookAim : MonoBehaviour
             lineRenderer.SetPosition(i, position);
         }
     }
+
 }

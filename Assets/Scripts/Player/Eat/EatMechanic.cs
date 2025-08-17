@@ -1,11 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using GabrielBigardi.SpriteAnimator;
+using System;
 
 public class EatMechanic : MonoBehaviour
 {
     private IEatDataProvider eatDataProvider;
     private Collider2D eatCollider;
     private bool isEating = false;
+
+    [Header("Reference")]
+    public SpriteAnimator eatAnimator;
+    public static Action onEating;
 
     private void Start()
     {
@@ -24,31 +30,29 @@ public class EatMechanic : MonoBehaviour
     public void EatEntity()
     {
         if (isEating) return;
-
+        onEating?.Invoke();
+        eatAnimator.Play("Biting"); // Play eat animation
+        EatSound();
         isEating = true;
         StartCoroutine(EatRoutine());
     }
 
     private IEnumerator EatRoutine()
-    {
-        eatCollider.enabled = true; // Enable eat detection
-        yield return new WaitForSeconds(0.2f); // Small window to detect collision
-        eatCollider.enabled = false;
-
+    {   
+        StartCoroutine(ColliderRoutine()); // Start collider routine
         yield return new WaitForSeconds(eatDataProvider.EatCooldown); // Cooldown before next eat
         isEating = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator ColliderRoutine()
     {
-        if (collision.CompareTag("Enemy"))
-        {
-            Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.EnemyKill(); // Kill enemy
-                Debug.Log("You ate an enemy!");
-            }
-        }
+        eatCollider.enabled = true; // Enable eat detection
+        yield return new WaitForSeconds(0.2f); // Small window to detect collision
+        eatCollider.enabled = false;
+    }
+
+    private void EatSound()
+    {
+        AudioManager.Instance.PlaySound(2, 0.6f); // Play eating sound
     }
 }

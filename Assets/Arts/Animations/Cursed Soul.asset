@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77fafcc6bd2ee94ebe9ac341b986e7a, type: 3}
+  m_Name: Cursed Soul
+  m_EditorClassIdentifier: 
+  SpriteAnimations:
+  - Name: Move
+    FPS: 5
+    Frames:
+    - {fileID: -1415707483, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: -654674537, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    SpriteAnimationType: 0
+  - Name: Hooked
+    FPS: 5
+    Frames:
+    - {fileID: -1379776910, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: -1650585865, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    SpriteAnimationType: 0
+  - Name: Dead
+    FPS: 5
+    Frames:
+    - {fileID: -920785448, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: -632075684, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: -1771327131, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: 1730148635, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    SpriteAnimationType: 0
