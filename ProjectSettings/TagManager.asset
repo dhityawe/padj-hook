@@ -46,3 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Hook
+    uniqueID: 1196570729
+    locked: 0
+  - name: Player
+    uniqueID: 3789589919
+    locked: 0

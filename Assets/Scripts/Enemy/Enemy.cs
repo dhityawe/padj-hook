@@ -92,6 +92,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void StopMove()
+    {
+        speed = 0;
+    }
+
     private void Hooked()
     {
         if (!isHooked) return;
@@ -120,12 +125,15 @@ public class Enemy : MonoBehaviour
         {
             OnPlayerCollide?.Invoke();
             PlayDeathAnimation();
+            EnemyDeadSound(0.8f);
         }
 
         if (collision.CompareTag("EatArea"))
         {
-            OnPlayerCollide?.Invoke();
             PlayDeathAnimation();
+            EnemyDeadSound(0.5f);
+
+            Debug.Log("Enemy got eaten");
         }
     }
 
@@ -137,7 +145,7 @@ public class Enemy : MonoBehaviour
         // Play death animation and wait for it to complete before calling EnemyKill
         if (spriteAnimator != null && spriteAnimator.HasAnimation("Dead"))
         {
-            EnemyDeadSound();
+            StopMove();
             spriteAnimator.Play("Dead").SetOnComplete(() =>
             {
                 // Death animation completed, now kill the enemy
@@ -163,9 +171,9 @@ public class Enemy : MonoBehaviour
         AudioManager.Instance.PlaySound(5, 0.5f);
     }
 
-    private void EnemyDeadSound()
+    private void EnemyDeadSound(float volume)
     {
-        AudioManager.Instance.PlaySound(4);
+        AudioManager.Instance.PlaySound(4, volume);
     }
     #endregion
 }

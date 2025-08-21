@@ -30,13 +30,13 @@ namespace GabrielBigardi.SpriteAnimator
         {
             if (_paused)
             {
-                Debug.Log("Animation Paused"); // ✅ Debug log
+                Debug.Log("Animation Paused");
                 return;
             }
 
             if (_imageRenderer == null)
             {
-                Debug.LogError("Image Renderer is NULL!"); // ✅ Debug log
+                Debug.LogError("Image Renderer is NULL!");
                 return;
             }
 
