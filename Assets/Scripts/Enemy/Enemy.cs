@@ -108,6 +108,7 @@ public class Enemy : MonoBehaviour
 
     public void Hook(Transform hook, Vector2 playerPosition)
     {
+        PlayHookedAnimation();
         this.hook = hook;
         this.playerPosition = playerPosition;
         isHooked = true;
@@ -137,6 +138,18 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    #region Animations
+
+    public void PlayHookedAnimation()
+    {
+        spriteAnimator?.Play("HookHit")
+            .SetOnComplete(() =>
+            {
+                
+                spriteAnimator?.Play("Hooked");
+            });
+    }
+
     public void PlayDeathAnimation()
     {
         // disable collider
@@ -159,6 +172,8 @@ public class Enemy : MonoBehaviour
             EnemyKill();
         }
     }
+
+    #endregion
 
     #region Sound Methods
     private void EnemyHookedSound()

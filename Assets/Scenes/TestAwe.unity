@@ -1562,7 +1562,8 @@ MonoBehaviour:
   hookHotkeyImage: {fileID: 1694553309}
   eatHotkeyImage: {fileID: 866318818}
   scaleDownAmount: 0.9
-  animationDuration: 0.1
+  animationDuration: 0.01
+  pressedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1075451933
 GameObject:
   m_ObjectHideFlags: 0
