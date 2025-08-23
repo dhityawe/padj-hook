@@ -33,7 +33,7 @@ MonoBehaviour:
     - {fileID: -278653325, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
     SpriteAnimationType: 1
   - Name: HookStart
-    FPS: 6
+    FPS: 12
     Frames:
     - {fileID: -247737183, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
     - {fileID: 1622087657, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
@@ -41,7 +41,7 @@ MonoBehaviour:
     - {fileID: -58317033, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
     SpriteAnimationType: 1
   - Name: HookHit
-    FPS: 6
+    FPS: 12
     Frames:
     - {fileID: -58317033, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}
     - {fileID: 362342470, guid: 371bcaccf452bad428e9164f6ff6b438, type: 3}

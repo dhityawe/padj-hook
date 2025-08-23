@@ -19,14 +19,23 @@ MonoBehaviour:
     - {fileID: -1415707483, guid: 09256089dd749ed42b17619cf953d874, type: 3}
     - {fileID: -654674537, guid: 09256089dd749ed42b17619cf953d874, type: 3}
     SpriteAnimationType: 0
+  - Name: HookStart
+    FPS: 24
+    Frames:
+    - {fileID: 261205141, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: 1948846928, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: -306662018, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: -529902538, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    - {fileID: 730354777, guid: 09256089dd749ed42b17619cf953d874, type: 3}
+    SpriteAnimationType: 0
   - Name: Hooked
-    FPS: 5
+    FPS: 8
     Frames:
     - {fileID: -1379776910, guid: 09256089dd749ed42b17619cf953d874, type: 3}
     - {fileID: -1650585865, guid: 09256089dd749ed42b17619cf953d874, type: 3}
     SpriteAnimationType: 0
   - Name: Dead
-    FPS: 5
+    FPS: 6
     Frames:
     - {fileID: -920785448, guid: 09256089dd749ed42b17619cf953d874, type: 3}
     - {fileID: -632075684, guid: 09256089dd749ed42b17619cf953d874, type: 3}
