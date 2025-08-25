@@ -22,16 +22,20 @@ namespace Assets.Scripts.Server
 
                 try
                 {
-                    LeaderboardResponse response = JsonUtility.FromJson<LeaderboardResponse>(jsonResponse);
-                    if (response != null && response.success && response.data != null)
+                    // The API returns a direct array, so we need to wrap it for Unity's JsonUtility
+                    string wrappedJson = "{\"entries\":" + jsonResponse + "}";
+                    LeaderboardArrayWrapper wrapper = JsonUtility.FromJson<LeaderboardArrayWrapper>(wrappedJson);
+                    
+                    if (wrapper != null && wrapper.entries != null)
                     {
-                        onSuccess?.Invoke(response.data);
+                        List<LeaderboardEntry> entries = new List<LeaderboardEntry>(wrapper.entries);
+                        Debug.Log($"Successfully parsed {entries.Count} leaderboard entries");
+                        onSuccess?.Invoke(entries);
                     }
                     else
                     {
-                        string errorMsg = response?.message ?? "Invalid response format";
-                        Debug.LogError("API Error: " + errorMsg);
-                        onError?.Invoke(errorMsg);
+                        Debug.LogError("Invalid response format - no entries found");
+                        onError?.Invoke("Invalid response format");
                     }
                 }
                 catch (Exception e)
