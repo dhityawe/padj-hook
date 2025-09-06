@@ -19,6 +19,7 @@ public class PlayerBaseStats : MonoBehaviour, IHookDataProvider, IEatDataProvide
     public float HookBaseRange => hookRange;
     public Vector3 PlayerPosition => transform.position;
     public float EatCooldown => eatCooldown;
+    public int Health = 3;
 
     // Draw hook range in editor
     private void OnDrawGizmos()

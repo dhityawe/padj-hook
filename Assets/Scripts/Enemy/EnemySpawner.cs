@@ -14,21 +14,60 @@ public class EnemySpawner : MonoBehaviour
     [Range(0, 100)]
     private float spawnRate = 50f;
 
+    [SerializeField] private float feverTimeCooldown = 20f;
+    [SerializeField] private float feverTimeDuration = 10f;
+
     private float spawnTimer;
+    private bool isFeverActive = false;
+    private float feverTimer = 0f;
+    private float feverCooldownTimer = 0f;
+    private float originalSpawnRate;
 
     private void Update()
     {
         spawnTimer += Time.deltaTime;
 
+        if (!isFeverActive)
+        {
+            feverCooldownTimer += Time.deltaTime;
+            if (feverCooldownTimer >= feverTimeCooldown)
+            {
+                ActivateFever();
+                feverCooldownTimer = 0f;
+            }
+        }
+        else
+        {
+            feverTimer += Time.deltaTime;
+            if (feverTimer >= feverTimeDuration)
+            {
+                DeactivateFever();
+            }
+        }
+
         if (spawnTimer >= 1f)
         {
             spawnTimer = 0f;
-
             if (Random.Range(0, 100) < spawnRate)
             {
                 SpawnEnemy();
             }
         }
+    }
+    private void ActivateFever()
+    {
+        isFeverActive = true;
+        feverTimer = 0f;
+        originalSpawnRate = spawnRate;
+        spawnRate *= 2f;
+        Debug.Log("Fever Time Activated! Spawn rate increased.");
+    }
+
+    private void DeactivateFever()
+    {
+        isFeverActive = false;
+        spawnRate = originalSpawnRate;
+        Debug.Log("Fever Time Deactivated. Spawn rate normalized.");
     }
 
     private void SpawnEnemy()

@@ -120,6 +120,7 @@ public class Enemy : MonoBehaviour
         {
             OnPlayerCollide?.Invoke();
             PlayDeathAnimation();
+            collision.GetComponent<PlayerBaseStats>().Health -= 1;
         }
 
         if (collision.CompareTag("EatArea"))

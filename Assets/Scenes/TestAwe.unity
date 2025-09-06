@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hookRange: 5
   hookSpeed: 10
-  hookCooldown: 2
+  hookCooldown: 5.16
   hookPoint: {fileID: 1387750050}
   eatCooldown: 1
 --- !u!114 &119898992
@@ -331,7 +331,7 @@ Transform:
   m_GameObject: {fileID: 130520117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.2, y: 1.58, z: 0}
+  m_LocalPosition: {x: -11.2, y: -1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -446,7 +446,7 @@ Transform:
   m_GameObject: {fileID: 245438809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.14, y: -1.15, z: 0}
+  m_LocalPosition: {x: 11.14, y: -2.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -928,7 +928,7 @@ Transform:
   m_GameObject: {fileID: 640295482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.28, y: 1.5, z: 0}
+  m_LocalPosition: {x: 11.28, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1260,6 +1260,8 @@ MonoBehaviour:
   - {fileID: 1748391436}
   - {fileID: 130520118}
   spawnRate: 50
+  feverTimeCooldown: 20
+  feverTimeDuration: 10
 --- !u!4 &981842380
 Transform:
   m_ObjectHideFlags: 0
@@ -1549,7 +1551,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71204f0d2c785c4bb2f99238734fabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3545654576647602013, guid: 58a4acfa1e597074398157254f6b6e3d, type: 3}
+  enemyConfigs:
+  - EnemyPrefab: {fileID: 3545654576647602013, guid: 58a4acfa1e597074398157254f6b6e3d, type: 3}
+    SpawnChance: 1
+  - EnemyPrefab: {fileID: 3545654576647602013, guid: 48d2c56f61434a7469812ab31935717e, type: 3}
+    SpawnChance: 0.1
 --- !u!4 &1325554687
 Transform:
   m_ObjectHideFlags: 0
@@ -1653,7 +1659,7 @@ Transform:
   m_GameObject: {fileID: 1417518035}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.99, y: -2.94, z: 0}
+  m_LocalPosition: {x: 9.99, y: -1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2071,7 +2077,7 @@ Transform:
   m_GameObject: {fileID: 1748391435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.56, y: -3.37, z: 0}
+  m_LocalPosition: {x: -11.56, y: -1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2407,7 +2413,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.068404615, y: 0.05574602}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2418,7 +2424,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.5}
+  m_Size: {x: 1.0895721, y: 1.87821}
   m_EdgeRadius: 0
 --- !u!50 &1918392753
 Rigidbody2D:
@@ -2751,7 +2757,7 @@ Transform:
   m_GameObject: {fileID: 2146101550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.63, y: 0.28, z: 0}
+  m_LocalPosition: {x: -11.63, y: 1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
