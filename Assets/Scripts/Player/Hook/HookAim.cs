@@ -8,6 +8,7 @@ public class HookAim : MonoBehaviour
 
     [SerializeField] private PlayerBaseStats playerBaseStats; // Manually assign in Inspector
     [SerializeField] private Transform hookPoint; // Manually assign HookPoint
+    [SerializeField] private Transform hookGameObject; // Manually assign the hook GameObject that needs to rotate
 
     void Start()
     {
@@ -23,6 +24,11 @@ public class HookAim : MonoBehaviour
         {
             Debug.LogError("hookPoint is not assigned! Assign it manually in the Inspector.");
             return;
+        }
+
+        if (hookGameObject == null)
+        {
+            Debug.LogWarning("hookGameObject is not assigned! The separate hook GameObject won't rotate.");
         }
 
         // Add a LineRenderer component if not already attached
@@ -49,6 +55,7 @@ public class HookAim : MonoBehaviour
         if (playerBaseStats == null || hookPoint == null) return; // Prevent errors
         DrawHookArea();
         DrawHookRange();
+        RotateHookGameObject();
     }
 
     private void DrawHookArea()
@@ -58,6 +65,17 @@ public class HookAim : MonoBehaviour
         Vector2 lookDir = mousePos - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+
+    private void RotateHookGameObject()
+    {
+        // Rotate the separate hook GameObject to match this GameObject's rotation
+        if (hookGameObject != null)
+        {
+            // Add 180 degrees to flip the rotation since it's backwards/upside down
+            Quaternion flippedRotation = transform.rotation * Quaternion.Euler(0f, 0f, 180f);
+            hookGameObject.rotation = flippedRotation;
+        }
     }
 
     private void DrawHookRange()

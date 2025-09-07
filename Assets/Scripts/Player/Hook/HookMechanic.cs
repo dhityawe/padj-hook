@@ -15,7 +15,6 @@ public class HookMechanic : MonoBehaviour
     public static Action OnHookEnd;
 
     [Header("Reference")]
-    public SpriteAnimator playerAnimator;
     public SpriteAnimator hookAnimator;
     [SerializeField] private PlayerInput playerInput; // Manually assign in Inspector
 
@@ -23,6 +22,12 @@ public class HookMechanic : MonoBehaviour
     {
         hookRb = GetComponent<Rigidbody2D>();
         toggleHook = false;
+    }
+
+    private void Start()
+    {
+        // Ensure the hook is inactive at start, but allow references to be established first
+        gameObject.SetActive(false);
     }
 
     public void Initialize(IHookDataProvider provider)
