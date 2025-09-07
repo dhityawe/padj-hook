@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+using System;
 using Assets.Scripts.Server;
 using TMPro;
 using UnityEngine;
@@ -14,10 +14,11 @@ public class SavePlayerUI : MonoBehaviour
     private int _randomScore = 0;
     [SerializeField]
     private ApiClient _apiClient;
+    public static event Action OnRegisterPlayer;
 
     private void Start()
     {
-        _randomScore = Random.Range(0, 1000); // Example score generation
+        _randomScore = UnityEngine.Random.Range(0, 1000); // Example score generation
     }
 
     public void HandleSaveButtonClickedAsync()
@@ -29,8 +30,9 @@ public class SavePlayerUI : MonoBehaviour
             return;
         }
 
-        PlayerSave.SavePlayerData(username, _randomScore);
+        PlayerSave.SavePlayerData(username, PlayerPrefs.HasKey("score") ? PlayerPrefs.GetInt("score") : 0);
         Debug.Log($"Player data saved: {username} with score {_randomScore}");
         StartCoroutine(_apiClient.PostPlayer(username, PlayerPrefs.GetInt("score"), _saveButton));
+        OnRegisterPlayer?.Invoke();
     }
 }
