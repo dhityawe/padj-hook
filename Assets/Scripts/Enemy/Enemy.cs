@@ -156,21 +156,13 @@ public class Enemy : MonoBehaviour
         boxCollider.enabled = false;
 
         // Play death animation and wait for it to complete before calling EnemyKill
-        if (spriteAnimator != null && spriteAnimator.HasAnimation("Dead"))
+
+        StopMove();
+        spriteAnimator.Play("Dead").SetOnComplete(() =>
         {
-            StopMove();
-            spriteAnimator.Play("Dead").SetOnComplete(() =>
-            {
-                // Death animation completed, now kill the enemy
-                EnemyKill();
-            });
-        }
-        else
-        {
-            // If no death animation exists, just kill immediately
-            Debug.LogWarning("No 'Dead' animation found, killing enemy immediately");
+            // Death animation completed, now kill the enemy
             EnemyKill();
-        }
+        });
     }
 
     #endregion
