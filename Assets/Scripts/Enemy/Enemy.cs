@@ -92,11 +92,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void StopMove()
-    {
-        speed = 0;
-    }
-
     private void Hooked()
     {
         if (!isHooked) return;
@@ -108,7 +103,6 @@ public class Enemy : MonoBehaviour
 
     public void Hook(Transform hook, Vector2 playerPosition)
     {
-        PlayHookedAnimation();
         this.hook = hook;
         this.playerPosition = playerPosition;
         isHooked = true;
@@ -126,28 +120,14 @@ public class Enemy : MonoBehaviour
         {
             OnPlayerCollide?.Invoke();
             PlayDeathAnimation();
-            EnemyDeadSound(0.8f);
+            collision.GetComponent<PlayerBaseStats>().Health -= 1;
         }
 
         if (collision.CompareTag("EatArea"))
         {
+            OnPlayerCollide?.Invoke();
             PlayDeathAnimation();
-            EnemyDeadSound(0.5f);
-
-            Debug.Log("Enemy got eaten");
         }
-    }
-
-    #region Animations
-
-    public void PlayHookedAnimation()
-    {
-        spriteAnimator?.Play("HookHit")
-            .SetOnComplete(() =>
-            {
-                
-                spriteAnimator?.Play("Hooked");
-            });
     }
 
     public void PlayDeathAnimation()
@@ -156,16 +136,22 @@ public class Enemy : MonoBehaviour
         boxCollider.enabled = false;
 
         // Play death animation and wait for it to complete before calling EnemyKill
-
-        StopMove();
-        spriteAnimator.Play("Dead").SetOnComplete(() =>
+        if (spriteAnimator != null && spriteAnimator.HasAnimation("Dead"))
         {
-            // Death animation completed, now kill the enemy
+            EnemyDeadSound();
+            spriteAnimator.Play("Dead").SetOnComplete(() =>
+            {
+                // Death animation completed, now kill the enemy
+                EnemyKill();
+            });
+        }
+        else
+        {
+            // If no death animation exists, just kill immediately
+            Debug.LogWarning("No 'Dead' animation found, killing enemy immediately");
             EnemyKill();
-        });
+        }
     }
-
-    #endregion
 
     #region Sound Methods
     private void EnemyHookedSound()
@@ -178,9 +164,9 @@ public class Enemy : MonoBehaviour
         AudioManager.Instance.PlaySound(5, 0.5f);
     }
 
-    private void EnemyDeadSound(float volume)
+    private void EnemyDeadSound()
     {
-        AudioManager.Instance.PlaySound(4, volume);
+        AudioManager.Instance.PlaySound(4);
     }
     #endregion
 }

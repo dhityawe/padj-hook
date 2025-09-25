@@ -1,6 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class EnemyConfig
+{
+    public Enemy EnemyPrefab;
+    public float SpawnChance;
+}
+
 public class EnemyPool : MonoBehaviour
 {
     public static EnemyPool Instance { get; private set; }
@@ -8,7 +15,7 @@ public class EnemyPool : MonoBehaviour
     private List<Enemy> inactiveEnemies = new List<Enemy>();
 
     [SerializeField]
-    private Enemy enemyPrefab;
+    private List<EnemyConfig> enemyConfigs;
 
     private void Awake()
     {
@@ -27,22 +34,51 @@ public class EnemyPool : MonoBehaviour
     {
         Enemy enemyToSpawn;
 
-        if (Instance.inactiveEnemies.Count > 0)
+        EnemyConfig selectedConfig = null;
+        float totalChance = 0f;
+        foreach (var config in Instance.enemyConfigs)
         {
-            enemyToSpawn = Instance.inactiveEnemies[0];
-            Instance.inactiveEnemies.RemoveAt(0);
-            Instance.activeEnemies.Add(enemyToSpawn);   
+            totalChance += config.SpawnChance;
+        }
+        float randomValue = Random.value * totalChance;
+        float cumulative = 0f;
+        foreach (var config in Instance.enemyConfigs)
+        {
+            cumulative += config.SpawnChance;
+            if (randomValue <= cumulative)
+            {
+                selectedConfig = config;
+                break;
+            }
+        }
+        if (selectedConfig == null && Instance.enemyConfigs.Count > 0)
+        {
+            selectedConfig = Instance.enemyConfigs[0]; // fallback
         }
 
-        else
+        enemyToSpawn = null;
+        if (selectedConfig != null)
         {
-            enemyToSpawn = Instantiate(Instance.enemyPrefab);
+            for (int i = 0; i < Instance.inactiveEnemies.Count; i++)
+            {
+                if (Instance.inactiveEnemies[i].GetType() == selectedConfig.EnemyPrefab.GetType())
+                {
+                    enemyToSpawn = Instance.inactiveEnemies[i];
+                    Instance.inactiveEnemies.RemoveAt(i);
+                    break;
+                }
+            }
+        }
+        if (enemyToSpawn == null && selectedConfig != null)
+        {
+            enemyToSpawn = Instantiate(selectedConfig.EnemyPrefab);
+        }
+        if (enemyToSpawn != null)
+        {
             Instance.activeEnemies.Add(enemyToSpawn);
+            enemyToSpawn.gameObject.SetActive(true);
+            enemyToSpawn.OnSpawn();
         }
-
-        enemyToSpawn.gameObject.SetActive(true);
-        enemyToSpawn.OnSpawn();
-        
         return enemyToSpawn;
     }
 
