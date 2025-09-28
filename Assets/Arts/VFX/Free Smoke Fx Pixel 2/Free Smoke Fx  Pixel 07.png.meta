@@ -1,0 +1,2308 @@
+fileFormatVersion: 2
+guid: aaecf0040338f8848878158460516a94
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf9ab9057667724fb932e5db2dc5223
+      internalID: -165550192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a41e298789cfd47ae0f7946b7662bb
+      internalID: 168167970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded376e4320e2464981c6e48a12c6ad4
+      internalID: 654457525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e26ed087ae2ce4d8dd61258cc49601
+      internalID: -507844752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f595f5c94126243bf295d2dc3e44c0
+      internalID: -90417952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368b7bdf9b9ee894786bdf21e9e3c0b6
+      internalID: 219312435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bc94a30b67d2e4da24e0936a4dfd43
+      internalID: 204305289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae3fefa27683474c9528bce9d302ba6
+      internalID: -1777475269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee11cd5adf66b444db94442fe59325cc
+      internalID: -1961531404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed4212428decbe4ebe2248abd9286f5
+      internalID: 1409491521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4174df92a420957409bdc092223dcf2f
+      internalID: -1500905972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ca6ac33ef209543813197bda42037b
+      internalID: 1465884462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f648ec54abae30d4d9ce151e9ac3f382
+      internalID: 1931462993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfae53cbf5dd9e4449cf14badb6bc930
+      internalID: -1637559463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd033e2ed0867264abf55d6803f5615c
+      internalID: 497643035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b877c242d7205184cb56405fca01ec29
+      internalID: -279504942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae18e8ac8a53eb0489d458bc8bbac349
+      internalID: -281398486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d586b4365067e45a2871853e23b854
+      internalID: 2038953628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8097306599c5d41949e3714c517933
+      internalID: 273101457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48f7bf8296da534daecd3773d4c5a65
+      internalID: -1569597748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae807c48a181bc4eba84f6cb55f358f
+      internalID: 85345710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7528b059cd890ad4f9bfb6ad04436158
+      internalID: 1116574340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_22
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d63b9adc1bdc6849a13e198f0ce4498
+      internalID: 1816063707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_23
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f070f387f0e2d66479a068fd0392ac69
+      internalID: -1185248641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_24
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebee6582160ee44692809feffca1818
+      internalID: -1877986218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b991ea6609cf9964c971d21890ca8650
+      internalID: -5320806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_26
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d130f47e293aa4996b821686dbcfac
+      internalID: 1383068816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4b73eb1d8b73245a4933ae82e4c0a9
+      internalID: 117692713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_28
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c374973ab2305a4ba061d8fc9419622
+      internalID: 148962521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_29
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defec232ab38b7a4f891939357d9e771
+      internalID: -1816755763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd1f560c30df2941b8efe2c1d169d65
+      internalID: 213770378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777d73d559fd8e246baa1575bbd7383e
+      internalID: -1150998581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e94f6958df24c48b8a42bf2d313140
+      internalID: -837387866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_48
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f600a8e851a5ed45b8d742e49124fc8
+      internalID: 930322893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911b606e3ecd4424fabb172c77312ef2
+      internalID: 1599279546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_50
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712a5991a7bdf34498c591d64fcf60ab
+      internalID: -1859115152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa23f7a7a697ea1438b53f8d2dbb5b8b
+      internalID: 1529696765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_52
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d001e45312b5b24c8650553c006416f
+      internalID: -291334645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_53
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1a4b6127c27b0459169ea9f397e14a
+      internalID: 1263389764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_54
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468b7cd1f3009644c981a6b4176c5cf6
+      internalID: -318236058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_55
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d834860c245f2fa4ca86d9c87efb48b1
+      internalID: -1975715456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_56
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c835be7840f98634a9d4b68816d2e64c
+      internalID: 1843425627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_57
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25c9132ebc87e048bdb0eb196955ee4
+      internalID: 1660715737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_58
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570910b0f38a1134dae53ec8e6b40495
+      internalID: -2068419727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_59
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee47e2b475edf78449ed1a731f2defee
+      internalID: -161054220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154cd045c390e3f4cbcfca7eda83940f
+      internalID: -1463247888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7b15f2919d0bd4abafd5ad4b92db2c
+      internalID: 960091923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_62
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b010508317742a148a76247cb14c3625
+      internalID: -2084379027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188ff691355e58d4582c3f9756fd13e2
+      internalID: -1313806206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_64
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07831c93d4d4e5947a498f3698a61163
+      internalID: 1250375535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_65
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c928afa5c7c3a77409bfe3e5ccab35a6
+      internalID: -846103540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_66
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bb41f8cb203bc47b5836d5023ca092
+      internalID: -1990460805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_67
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c3638293a41e5498e1691a368dffe7
+      internalID: 1000284758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_68
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063746e7604d7334d8d6f7a94a77bad3
+      internalID: 1807425507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_69
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0221007eb3f664e4dbf6a20e3821b110
+      internalID: -1601941511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_70
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634602dcdc38b494c94bd38a071152f7
+      internalID: -125921857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_71
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af97061cdda0d947bb9fba2e9863e41
+      internalID: 847511131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_72
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4960aa6f64448de409fc1ae593200e4e
+      internalID: -232355589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_73
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5a23f031eac0441842cf1b36ed9d70
+      internalID: -1818984665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_74
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbfce0cb71f7cf44935b8bfb70d1a4d
+      internalID: 1090073563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfbe27f17cba46419e3c04752434639
+      internalID: -2051881260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_106
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7810dbf3a30e52741930ae5c0880b5b0
+      internalID: 184889676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_107
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acd5b6c74dabd844856bbd8268d29d6
+      internalID: 1303594705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_108
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d05b0f971d9fd4897ecc7fb35e087b
+      internalID: 1598185838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_109
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05b0c3efe912a34bb0ec2e29b7c4d62
+      internalID: -628661662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_110
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536f1065ab9838e4fba991ea528a0bb4
+      internalID: 1638559829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_111
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0d9da1cd2b2254489e2c9de88f3d0b
+      internalID: -1441622450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_112
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64102ca5e2b420948aee496e115e6721
+      internalID: -1689113607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_113
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d6a34f224633745844e8777e2a71cc
+      internalID: -766479695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_114
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf6d585b5740c94aa59496471ff9e06
+      internalID: 808859296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_115
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba39e732f0d09b4e96aa82abb389c89
+      internalID: -272134904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_116
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba9d6060b8ae3440a80ca80ec2a8cb8
+      internalID: -1845749889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_117
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125a663f33b388145a0589879d95fc24
+      internalID: -1350083938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_118
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438d15c76cf046645a8ca69421d2fe16
+      internalID: -1440290751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_119
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df4d4386e274c4498488629802b01a9
+      internalID: -1126380669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3367f0fd1b60b4d91d9c45c0316992
+      internalID: 801835849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_121
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f199e41bb23f75459006d70497917af
+      internalID: -672205631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54ce6a0f3ac18543b201b757789eb06
+      internalID: 1339305669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_123
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d22217bec5ff74f877f1bb1018fba2
+      internalID: 1237078099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_124
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f0321acabc279459a6ac2ea67e519b
+      internalID: 1175082664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_125
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da8872e3591f214eaafe7e06f8c85e1
+      internalID: 1830299063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_126
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559c2d92bc2d0b84b8658fb7c2f54e6f
+      internalID: -1283677271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_127
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bef3b61f34233d45bc2b0c4fbd220b9
+      internalID: 1791300573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_128
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e185afc4d5764ef4da7fd80b68f6891b
+      internalID: 375543564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_129
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1734ef0fea8d9cd4385a13abff4d6581
+      internalID: -1984484581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_130
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adea0ecc058edd47a12651a07bbd898
+      internalID: -1610396113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_131
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1c6d13058f86e4089c0b059ea1e57c
+      internalID: -1992846889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_132
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be848d00ac6baee43b317dc17c0e10b3
+      internalID: 1084506605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_133
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dda826d3658b624ab2458c7593912fc
+      internalID: 629070038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Smoke Fx  Pixel 07_137
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126bdfaef3256814c988d0f5a46cb5bd
+      internalID: 1423335092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Free Smoke Fx  Pixel 07_0: -165550192
+      Free Smoke Fx  Pixel 07_1: 168167970
+      Free Smoke Fx  Pixel 07_10: -1500905972
+      Free Smoke Fx  Pixel 07_100: 1530193060
+      Free Smoke Fx  Pixel 07_101: 68562642
+      Free Smoke Fx  Pixel 07_102: 245760807
+      Free Smoke Fx  Pixel 07_103: 151301965
+      Free Smoke Fx  Pixel 07_104: 1800845594
+      Free Smoke Fx  Pixel 07_105: -2051881260
+      Free Smoke Fx  Pixel 07_106: 184889676
+      Free Smoke Fx  Pixel 07_107: 1303594705
+      Free Smoke Fx  Pixel 07_108: 1598185838
+      Free Smoke Fx  Pixel 07_109: -628661662
+      Free Smoke Fx  Pixel 07_11: 1465884462
+      Free Smoke Fx  Pixel 07_110: 1638559829
+      Free Smoke Fx  Pixel 07_111: -1441622450
+      Free Smoke Fx  Pixel 07_112: -1689113607
+      Free Smoke Fx  Pixel 07_113: -766479695
+      Free Smoke Fx  Pixel 07_114: 808859296
+      Free Smoke Fx  Pixel 07_115: -272134904
+      Free Smoke Fx  Pixel 07_116: -1845749889
+      Free Smoke Fx  Pixel 07_117: -1350083938
+      Free Smoke Fx  Pixel 07_118: -1440290751
+      Free Smoke Fx  Pixel 07_119: -1126380669
+      Free Smoke Fx  Pixel 07_12: 1931462993
+      Free Smoke Fx  Pixel 07_120: 801835849
+      Free Smoke Fx  Pixel 07_121: -672205631
+      Free Smoke Fx  Pixel 07_122: 1339305669
+      Free Smoke Fx  Pixel 07_123: 1237078099
+      Free Smoke Fx  Pixel 07_124: 1175082664
+      Free Smoke Fx  Pixel 07_125: 1830299063
+      Free Smoke Fx  Pixel 07_126: -1283677271
+      Free Smoke Fx  Pixel 07_127: 1791300573
+      Free Smoke Fx  Pixel 07_128: 375543564
+      Free Smoke Fx  Pixel 07_129: -1984484581
+      Free Smoke Fx  Pixel 07_13: -1637559463
+      Free Smoke Fx  Pixel 07_130: -1610396113
+      Free Smoke Fx  Pixel 07_131: -1992846889
+      Free Smoke Fx  Pixel 07_132: 1084506605
+      Free Smoke Fx  Pixel 07_133: 629070038
+      Free Smoke Fx  Pixel 07_134: 1889360310
+      Free Smoke Fx  Pixel 07_135: 550945866
+      Free Smoke Fx  Pixel 07_136: -707360480
+      Free Smoke Fx  Pixel 07_137: 1423335092
+      Free Smoke Fx  Pixel 07_138: -1788894330
+      Free Smoke Fx  Pixel 07_139: -2143269118
+      Free Smoke Fx  Pixel 07_14: 497643035
+      Free Smoke Fx  Pixel 07_140: 200206840
+      Free Smoke Fx  Pixel 07_141: 756791272
+      Free Smoke Fx  Pixel 07_142: 924953751
+      Free Smoke Fx  Pixel 07_143: 1258316895
+      Free Smoke Fx  Pixel 07_144: -985098972
+      Free Smoke Fx  Pixel 07_145: 1828844815
+      Free Smoke Fx  Pixel 07_146: 92218746
+      Free Smoke Fx  Pixel 07_147: -1237984629
+      Free Smoke Fx  Pixel 07_148: 1533063264
+      Free Smoke Fx  Pixel 07_149: -118012753
+      Free Smoke Fx  Pixel 07_15: -279504942
+      Free Smoke Fx  Pixel 07_150: 1622000165
+      Free Smoke Fx  Pixel 07_151: -80284278
+      Free Smoke Fx  Pixel 07_152: 2112086034
+      Free Smoke Fx  Pixel 07_153: 336782390
+      Free Smoke Fx  Pixel 07_154: 1098147271
+      Free Smoke Fx  Pixel 07_155: 539997836
+      Free Smoke Fx  Pixel 07_156: -1007925673
+      Free Smoke Fx  Pixel 07_157: -2146340540
+      Free Smoke Fx  Pixel 07_158: -1477899352
+      Free Smoke Fx  Pixel 07_159: -1860866786
+      Free Smoke Fx  Pixel 07_16: -281398486
+      Free Smoke Fx  Pixel 07_160: -2047131187
+      Free Smoke Fx  Pixel 07_161: -1997444364
+      Free Smoke Fx  Pixel 07_162: 265141649
+      Free Smoke Fx  Pixel 07_163: 831485136
+      Free Smoke Fx  Pixel 07_164: 379050234
+      Free Smoke Fx  Pixel 07_165: -1118851831
+      Free Smoke Fx  Pixel 07_166: -723285688
+      Free Smoke Fx  Pixel 07_167: 150308260
+      Free Smoke Fx  Pixel 07_168: -695939094
+      Free Smoke Fx  Pixel 07_169: 1013793208
+      Free Smoke Fx  Pixel 07_17: 2038953628
+      Free Smoke Fx  Pixel 07_170: 330090001
+      Free Smoke Fx  Pixel 07_171: 1264806181
+      Free Smoke Fx  Pixel 07_172: -506155669
+      Free Smoke Fx  Pixel 07_173: 2001143561
+      Free Smoke Fx  Pixel 07_174: 1720048614
+      Free Smoke Fx  Pixel 07_175: -1609501372
+      Free Smoke Fx  Pixel 07_176: -1536314121
+      Free Smoke Fx  Pixel 07_177: -13666847
+      Free Smoke Fx  Pixel 07_178: -211658773
+      Free Smoke Fx  Pixel 07_179: -954618262
+      Free Smoke Fx  Pixel 07_18: 273101457
+      Free Smoke Fx  Pixel 07_180: -967209207
+      Free Smoke Fx  Pixel 07_181: -1742911486
+      Free Smoke Fx  Pixel 07_182: 991174050
+      Free Smoke Fx  Pixel 07_183: 1323554404
+      Free Smoke Fx  Pixel 07_184: -558525865
+      Free Smoke Fx  Pixel 07_185: -1895530995
+      Free Smoke Fx  Pixel 07_186: 1933244782
+      Free Smoke Fx  Pixel 07_187: -385240463
+      Free Smoke Fx  Pixel 07_188: 789744538
+      Free Smoke Fx  Pixel 07_189: 1420258354
+      Free Smoke Fx  Pixel 07_19: -1569597748
+      Free Smoke Fx  Pixel 07_190: 1931709331
+      Free Smoke Fx  Pixel 07_191: 1088541265
+      Free Smoke Fx  Pixel 07_192: -551393048
+      Free Smoke Fx  Pixel 07_193: 1721849690
+      Free Smoke Fx  Pixel 07_194: -1701131199
+      Free Smoke Fx  Pixel 07_195: 900844377
+      Free Smoke Fx  Pixel 07_196: -754702716
+      Free Smoke Fx  Pixel 07_197: 819046230
+      Free Smoke Fx  Pixel 07_198: 1882793090
+      Free Smoke Fx  Pixel 07_199: -1846497365
+      Free Smoke Fx  Pixel 07_2: 654457525
+      Free Smoke Fx  Pixel 07_20: 85345710
+      Free Smoke Fx  Pixel 07_200: -705377311
+      Free Smoke Fx  Pixel 07_201: -1250658816
+      Free Smoke Fx  Pixel 07_202: -156225066
+      Free Smoke Fx  Pixel 07_203: 695224890
+      Free Smoke Fx  Pixel 07_204: -1879170129
+      Free Smoke Fx  Pixel 07_205: -596740156
+      Free Smoke Fx  Pixel 07_206: 1220179617
+      Free Smoke Fx  Pixel 07_207: 1210599849
+      Free Smoke Fx  Pixel 07_208: -1842733935
+      Free Smoke Fx  Pixel 07_209: 703059151
+      Free Smoke Fx  Pixel 07_21: 1116574340
+      Free Smoke Fx  Pixel 07_210: -201321205
+      Free Smoke Fx  Pixel 07_211: 983329618
+      Free Smoke Fx  Pixel 07_212: 1259002213
+      Free Smoke Fx  Pixel 07_213: 1149697519
+      Free Smoke Fx  Pixel 07_214: -1905851964
+      Free Smoke Fx  Pixel 07_215: -1318699275
+      Free Smoke Fx  Pixel 07_216: -1090262143
+      Free Smoke Fx  Pixel 07_217: -1064458287
+      Free Smoke Fx  Pixel 07_218: -1749170426
+      Free Smoke Fx  Pixel 07_219: 1843567933
+      Free Smoke Fx  Pixel 07_22: 1816063707
+      Free Smoke Fx  Pixel 07_220: -2033166839
+      Free Smoke Fx  Pixel 07_221: -680901890
+      Free Smoke Fx  Pixel 07_222: -980802961
+      Free Smoke Fx  Pixel 07_223: 1805258783
+      Free Smoke Fx  Pixel 07_224: 1043847951
+      Free Smoke Fx  Pixel 07_225: 694531542
+      Free Smoke Fx  Pixel 07_226: 1653071345
+      Free Smoke Fx  Pixel 07_227: -1720627090
+      Free Smoke Fx  Pixel 07_228: 1390810724
+      Free Smoke Fx  Pixel 07_229: -1618953980
+      Free Smoke Fx  Pixel 07_23: -1185248641
+      Free Smoke Fx  Pixel 07_230: 1309410838
+      Free Smoke Fx  Pixel 07_231: 884212367
+      Free Smoke Fx  Pixel 07_232: -1605335495
+      Free Smoke Fx  Pixel 07_233: 1428119519
+      Free Smoke Fx  Pixel 07_234: 1718811738
+      Free Smoke Fx  Pixel 07_235: 452227539
+      Free Smoke Fx  Pixel 07_236: 107661263
+      Free Smoke Fx  Pixel 07_237: 1614522659
+      Free Smoke Fx  Pixel 07_238: 2143173987
+      Free Smoke Fx  Pixel 07_239: -975347849
+      Free Smoke Fx  Pixel 07_24: -1877986218
+      Free Smoke Fx  Pixel 07_240: 412779047
+      Free Smoke Fx  Pixel 07_241: -102860659
+      Free Smoke Fx  Pixel 07_242: 2103956078
+      Free Smoke Fx  Pixel 07_243: -201394153
+      Free Smoke Fx  Pixel 07_244: 876915803
+      Free Smoke Fx  Pixel 07_245: -737237231
+      Free Smoke Fx  Pixel 07_246: 1115523168
+      Free Smoke Fx  Pixel 07_247: -317564515
+      Free Smoke Fx  Pixel 07_248: 899301891
+      Free Smoke Fx  Pixel 07_249: 1482008546
+      Free Smoke Fx  Pixel 07_25: -5320806
+      Free Smoke Fx  Pixel 07_250: 2067292494
+      Free Smoke Fx  Pixel 07_251: 788032964
+      Free Smoke Fx  Pixel 07_252: -1721520739
+      Free Smoke Fx  Pixel 07_253: -1845024440
+      Free Smoke Fx  Pixel 07_254: -606833984
+      Free Smoke Fx  Pixel 07_255: 1368904839
+      Free Smoke Fx  Pixel 07_256: -1439157125
+      Free Smoke Fx  Pixel 07_257: -694086105
+      Free Smoke Fx  Pixel 07_258: -1629352990
+      Free Smoke Fx  Pixel 07_259: 1619328418
+      Free Smoke Fx  Pixel 07_26: 1383068816
+      Free Smoke Fx  Pixel 07_260: -419518848
+      Free Smoke Fx  Pixel 07_261: -210450704
+      Free Smoke Fx  Pixel 07_262: 843645266
+      Free Smoke Fx  Pixel 07_263: 1596947486
+      Free Smoke Fx  Pixel 07_264: 1947970371
+      Free Smoke Fx  Pixel 07_265: -696550826
+      Free Smoke Fx  Pixel 07_266: -81510041
+      Free Smoke Fx  Pixel 07_267: 269190814
+      Free Smoke Fx  Pixel 07_268: -33758070
+      Free Smoke Fx  Pixel 07_269: 1689540982
+      Free Smoke Fx  Pixel 07_27: 117692713
+      Free Smoke Fx  Pixel 07_270: -187797941
+      Free Smoke Fx  Pixel 07_271: -482243366
+      Free Smoke Fx  Pixel 07_272: -1509784622
+      Free Smoke Fx  Pixel 07_273: -2101473786
+      Free Smoke Fx  Pixel 07_274: -1654925929
+      Free Smoke Fx  Pixel 07_275: -300436202
+      Free Smoke Fx  Pixel 07_276: 57721802
+      Free Smoke Fx  Pixel 07_277: 2106523886
+      Free Smoke Fx  Pixel 07_28: 148962521
+      Free Smoke Fx  Pixel 07_29: -1816755763
+      Free Smoke Fx  Pixel 07_3: -507844752
+      Free Smoke Fx  Pixel 07_30: -1124554919
+      Free Smoke Fx  Pixel 07_31: -2037000805
+      Free Smoke Fx  Pixel 07_32: -1625206474
+      Free Smoke Fx  Pixel 07_33: 795779102
+      Free Smoke Fx  Pixel 07_34: -1437860225
+      Free Smoke Fx  Pixel 07_35: 1870256179
+      Free Smoke Fx  Pixel 07_36: -1996387036
+      Free Smoke Fx  Pixel 07_37: 1371762040
+      Free Smoke Fx  Pixel 07_38: -763623765
+      Free Smoke Fx  Pixel 07_39: -773712508
+      Free Smoke Fx  Pixel 07_4: -90417952
+      Free Smoke Fx  Pixel 07_40: -349176009
+      Free Smoke Fx  Pixel 07_41: 686205969
+      Free Smoke Fx  Pixel 07_42: 1716072370
+      Free Smoke Fx  Pixel 07_43: 290507890
+      Free Smoke Fx  Pixel 07_44: -1072066033
+      Free Smoke Fx  Pixel 07_45: 213770378
+      Free Smoke Fx  Pixel 07_46: -1150998581
+      Free Smoke Fx  Pixel 07_47: -837387866
+      Free Smoke Fx  Pixel 07_48: 930322893
+      Free Smoke Fx  Pixel 07_49: 1599279546
+      Free Smoke Fx  Pixel 07_5: 219312435
+      Free Smoke Fx  Pixel 07_50: -1859115152
+      Free Smoke Fx  Pixel 07_51: 1529696765
+      Free Smoke Fx  Pixel 07_52: -291334645
+      Free Smoke Fx  Pixel 07_53: 1263389764
+      Free Smoke Fx  Pixel 07_54: -318236058
+      Free Smoke Fx  Pixel 07_55: -1975715456
+      Free Smoke Fx  Pixel 07_56: 1843425627
+      Free Smoke Fx  Pixel 07_57: 1660715737
+      Free Smoke Fx  Pixel 07_58: -2068419727
+      Free Smoke Fx  Pixel 07_59: -161054220
+      Free Smoke Fx  Pixel 07_6: 204305289
+      Free Smoke Fx  Pixel 07_60: -1463247888
+      Free Smoke Fx  Pixel 07_61: 960091923
+      Free Smoke Fx  Pixel 07_62: -2084379027
+      Free Smoke Fx  Pixel 07_63: -1313806206
+      Free Smoke Fx  Pixel 07_64: 1250375535
+      Free Smoke Fx  Pixel 07_65: -846103540
+      Free Smoke Fx  Pixel 07_66: -1990460805
+      Free Smoke Fx  Pixel 07_67: 1000284758
+      Free Smoke Fx  Pixel 07_68: 1807425507
+      Free Smoke Fx  Pixel 07_69: -1601941511
+      Free Smoke Fx  Pixel 07_7: -1777475269
+      Free Smoke Fx  Pixel 07_70: -125921857
+      Free Smoke Fx  Pixel 07_71: 847511131
+      Free Smoke Fx  Pixel 07_72: -232355589
+      Free Smoke Fx  Pixel 07_73: -1818984665
+      Free Smoke Fx  Pixel 07_74: 1090073563
+      Free Smoke Fx  Pixel 07_75: -1889084596
+      Free Smoke Fx  Pixel 07_76: 1240238596
+      Free Smoke Fx  Pixel 07_77: 454191861
+      Free Smoke Fx  Pixel 07_78: 1859011480
+      Free Smoke Fx  Pixel 07_79: -516280661
+      Free Smoke Fx  Pixel 07_8: -1961531404
+      Free Smoke Fx  Pixel 07_80: -99741204
+      Free Smoke Fx  Pixel 07_81: 520502519
+      Free Smoke Fx  Pixel 07_82: 304125485
+      Free Smoke Fx  Pixel 07_83: -1303658716
+      Free Smoke Fx  Pixel 07_84: -379757622
+      Free Smoke Fx  Pixel 07_85: -1881213623
+      Free Smoke Fx  Pixel 07_86: 329068095
+      Free Smoke Fx  Pixel 07_87: -369566970
+      Free Smoke Fx  Pixel 07_88: 1849766906
+      Free Smoke Fx  Pixel 07_89: -1162327903
+      Free Smoke Fx  Pixel 07_9: 1409491521
+      Free Smoke Fx  Pixel 07_90: 1598497160
+      Free Smoke Fx  Pixel 07_91: -1096725362
+      Free Smoke Fx  Pixel 07_92: -1697342087
+      Free Smoke Fx  Pixel 07_93: 90833709
+      Free Smoke Fx  Pixel 07_94: -1913621665
+      Free Smoke Fx  Pixel 07_95: 120827110
+      Free Smoke Fx  Pixel 07_96: -1217373465
+      Free Smoke Fx  Pixel 07_97: -1146854427
+      Free Smoke Fx  Pixel 07_98: 634808429
+      Free Smoke Fx  Pixel 07_99: -1800022130
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

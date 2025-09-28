@@ -13,14 +13,6 @@ MonoBehaviour:
   m_Name: Fever Soul
   m_EditorClassIdentifier: 
   SpriteAnimations:
-  - Name: Death
-    FPS: 6
-    Frames:
-    - {fileID: 1710641102, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
-    - {fileID: -2114023830, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
-    - {fileID: -174195225, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
-    - {fileID: 86677431, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
-    SpriteAnimationType: 0
   - Name: Move
     FPS: 5
     Frames:
@@ -44,4 +36,12 @@ MonoBehaviour:
     Frames:
     - {fileID: -1573851737, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
     - {fileID: 2112429924, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
+    SpriteAnimationType: 0
+  - Name: Death
+    FPS: 6
+    Frames:
+    - {fileID: 1710641102, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
+    - {fileID: -2114023830, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
+    - {fileID: -174195225, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
+    - {fileID: 86677431, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
     SpriteAnimationType: 0

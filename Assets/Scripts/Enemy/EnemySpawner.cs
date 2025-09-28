@@ -17,6 +17,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float feverTimeCooldown = 20f;
     [SerializeField] private float feverTimeDuration = 10f;
 
+    [SerializeField] private List<GameObject> lightings;
+
     private float spawnTimer;
     private bool isFeverActive = false;
     private float feverTimer = 0f;

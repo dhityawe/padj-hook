@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3235497544541110452}
   - component: {fileID: 5623558969834872195}
   m_Layer: 0
-  m_Name: EnemyBomber
-  m_TagString: Enemy
+  m_Name: CursedSoul
+  m_TagString: EnemyCursed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,14 +139,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.51, y: 0.44}
+    oldSize: {x: 1.7, y: 1.4666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!114 &5623558969834872195
 MonoBehaviour:
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playAutomatically: 1
-  _spriteAnimationObject: {fileID: 11400000, guid: b2b2256940fb56048a395af510c0199a, type: 2}
+  _spriteAnimationObject: {fileID: 11400000, guid: 3d7180a366499e143abbdf29bb81899f, type: 2}
   _spriteRenderer: {fileID: 4296575739268483910}
 --- !u!1 &9135729801152014269
 GameObject:

@@ -13,6 +13,16 @@ public class EatMechanic : MonoBehaviour
     public SpriteAnimator eatAnimator;
     public static Action onEating;
 
+    private void OnEnable()
+    {
+        onEating += EatSound;
+    }
+
+    private void OnDisable()
+    {
+        onEating -= EatSound;
+    }
+
     private void Start()
     {
         eatDataProvider = GetComponentInParent<IEatDataProvider>(); // Get stats from PlayerBaseStats

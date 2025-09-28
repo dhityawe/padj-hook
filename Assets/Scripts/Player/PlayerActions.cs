@@ -1,24 +1,27 @@
 using UnityEngine;
 using GabrielBigardi.SpriteAnimator;
 using DG.Tweening;
+using System;
 
 public class PlayerActions : MonoBehaviour
 {
-    private PlayerInput playerInput;
-    private HookMechanic hookMechanic;
-    private EatMechanic eatMechanic;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private HookMechanic hookMechanic;
+    [SerializeField] private EatMechanic eatMechanic;
 
     [Header("Reference")]
-    private CooldownManager cooldownManager;
-    private PlayerBaseStats playerBaseStats;
-    public SpriteAnimator spriteAnimator;
+    [SerializeField] private CooldownManager cooldownManager;
+    [SerializeField] private PlayerBaseStats playerBaseStats;
+    [SerializeField] public SpriteAnimator spriteAnimator;
     [SerializeField]private SpriteRenderer playerSpriteRenderer;
     private Color originalPlayerColor = Color.white; // Store the original color
+    private float originalCameraSize; // Store the original camera size
 
     private void OnEnable()
     {
         HookMechanic.OnHookEnd += HookHitAnimation;
         Enemy.OnPlayerCollide += PlayerHurtSound;
+        Enemy.OnEated += EatVisualEffects;
         EatMechanic.onEating += EatAnimation;
     }
 
@@ -26,17 +29,12 @@ public class PlayerActions : MonoBehaviour
     {
         HookMechanic.OnHookEnd -= HookHitAnimation;
         Enemy.OnPlayerCollide -= PlayerHurtSound;
+        Enemy.OnEated -= EatVisualEffects;
         EatMechanic.onEating -= EatAnimation;
     }
 
     void Start()
-    {
-        playerInput = GetComponent<PlayerInput>();
-        hookMechanic = GetComponentInChildren<HookMechanic>();
-        eatMechanic = GetComponentInChildren<EatMechanic>();
-        cooldownManager = GetComponent<CooldownManager>();
-        playerBaseStats = GetComponent<PlayerBaseStats>();
-        
+    {       
         // Get the SpriteRenderer from the SpriteAnimator for hit effects
         if (spriteAnimator != null)
         {
@@ -61,6 +59,12 @@ public class PlayerActions : MonoBehaviour
         }
 
         hookMechanic.Initialize(playerBaseStats); // Ensure HookMechanic gets the required data
+
+        // Store the original camera size at start
+        if (Camera.main != null)
+        {
+            originalCameraSize = Camera.main.orthographicSize;
+        }
 
         playerInput.OnHookPressed += HookEntity;
         playerInput.OnEatPressed += EatEntity;
@@ -110,6 +114,42 @@ public class PlayerActions : MonoBehaviour
         spriteAnimator.Play("Eat").SetOnComplete(() => {
             spriteAnimator.Play("Idle");
         });
+    }
+    
+    private void EatVisualEffects()
+    {
+        // Kill any existing tweens to prevent interference
+        transform.DOKill();
+        playerSpriteRenderer?.DOKill();
+        
+        // Scale pulse effect - player grows briefly then returns to normal
+        Vector3 originalScale = transform.localScale;
+        transform.DOScale(originalScale * 1.2f, 0.1f)
+            .SetEase(Ease.OutQuad)
+            .OnComplete(() => {
+                transform.DOScale(originalScale, 0.15f)
+                    .SetEase(Ease.InOutQuad);
+            });
+        
+        // Improved screen zoom effect for satisfying eat feedback
+        if (Camera.main != null)
+        {
+            // Kill any existing camera tweens to prevent conflicts
+            Camera.main.DOKill();
+            
+            // Force camera back to original size first to prevent accumulation
+            Camera.main.orthographicSize = originalCameraSize;
+            
+            Camera.main.DOOrthoSize(originalCameraSize * 0.95f, 0.025f) // Zoom in slightly
+                .SetEase(Ease.OutQuad)
+                .OnComplete(() => {
+                    if (Camera.main != null) // Safety check in case camera changes
+                    {
+                        Camera.main.DOOrthoSize(originalCameraSize, 0.15f) // Zoom back to TRUE original size
+                            .SetEase(Ease.InOutQuad);
+                    }
+                });
+        }
     }
 
     private void PlayerHitAnimation()

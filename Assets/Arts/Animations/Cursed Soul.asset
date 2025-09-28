@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteAnimations:
   - Name: Move
-    FPS: 5
+    FPS: 6
     Frames:
     - {fileID: -1415707483, guid: 09256089dd749ed42b17619cf953d874, type: 3}
     - {fileID: -654674537, guid: 09256089dd749ed42b17619cf953d874, type: 3}
     SpriteAnimationType: 0
-  - Name: HookStart
+  - Name: HookHit
     FPS: 24
     Frames:
     - {fileID: 261205141, guid: 09256089dd749ed42b17619cf953d874, type: 3}

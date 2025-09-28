@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - EatArea
+  - EnemyCursed
   layers:
   - Default
   - TransparentFX
@@ -46,9 +47,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Envi/Props
+    uniqueID: 2696156143
+    locked: 0
+  - name: Enemy
+    uniqueID: 1858780989
+    locked: 0
   - name: Hook
     uniqueID: 1196570729
     locked: 0
+  - name: Fog
+    uniqueID: 1637568545
+    locked: 0
+  - name: Effect
+    uniqueID: 26118915
+    locked: 0
   - name: Player
     uniqueID: 3789589919
+    locked: 0
+  - name: Vfx
+    uniqueID: 458973831
     locked: 0

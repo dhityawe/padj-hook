@@ -5,6 +5,8 @@ using GabrielBigardi.SpriteAnimator;
 public class Enemy : MonoBehaviour
 {
     public static Action OnPlayerCollide;
+    public static Action OnEated;
+    public static Action OnCursedEffect;
     public SpriteAnimator spriteAnimator;
     private BoxCollider2D boxCollider;
 
@@ -20,6 +22,9 @@ public class Enemy : MonoBehaviour
 
     private bool isHooked = false;
     private bool soundPlayed = false;
+    private bool isDying = false; // Track if enemy is dying to prevent animation conflicts
+    private bool hookedAnimationPlayed = false; // Track if hooked animation was already played
+    private bool facingRight = true; // Track which direction the sprite is facing
 
     private Transform waypointParent;
 
@@ -65,6 +70,9 @@ public class Enemy : MonoBehaviour
 
         isHooked = false;
         soundPlayed = false;
+        isDying = false; // Reset dying state on spawn
+        hookedAnimationPlayed = false; // Reset hooked animation state
+        facingRight = true; // Reset facing direction on spawn
     }
 
     private void Awake()
@@ -82,6 +90,11 @@ public class Enemy : MonoBehaviour
     {
         if (isHooked) return;
 
+        Vector3 direction = waypoint.position - transform.position;
+        
+        // Flip sprite based on movement direction
+        FlipSprite(direction.x);
+
         transform.position = Vector3.MoveTowards(transform.position, waypoint.position, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, waypoint.position) < 0.1f)
@@ -94,10 +107,24 @@ public class Enemy : MonoBehaviour
 
     private void Hooked()
     {
-        if (!isHooked) return;
+        if (!isHooked || isDying) return; // Don't play hooked animation if dying
+
+        Vector3 direction = hook.position - transform.position;
+        
+        // Flip sprite based on hook direction
+        FlipSprite(direction.x);
 
         transform.position = hook.position;
-        // spriteAnimator.Play("Hooked");
+        
+        // Only play hooked animation once to prevent spam
+        if (!hookedAnimationPlayed)
+        {
+            spriteAnimator.Play("HookHit").SetOnComplete(() => {
+                spriteAnimator.Play("Hooked");
+            });
+            hookedAnimationPlayed = true;
+        }
+        
         EnemyHookedSound();
     }
 
@@ -106,6 +133,7 @@ public class Enemy : MonoBehaviour
         this.hook = hook;
         this.playerPosition = playerPosition;
         isHooked = true;
+        hookedAnimationPlayed = false; // Reset when newly hooked
     }
 
     public void EnemyKill()
@@ -120,18 +148,54 @@ public class Enemy : MonoBehaviour
         {
             OnPlayerCollide?.Invoke();
             PlayDeathAnimation();
-            collision.GetComponent<PlayerBaseStats>().Health -= 1;
+            
+            if (gameObject.tag == "EnemyCursed")
+            {
+                OnCursedEffect?.Invoke();
+                //* cursed explosion sound/effect here
+            }
+
+            PlayerBaseStats playerStats = collision.GetComponent<PlayerBaseStats>();
+            if (playerStats != null)
+            {
+                playerStats.Health -= 1;
+            }
+            else
+            {
+                Debug.LogWarning("Player collider doesn't have PlayerBaseStats component!");
+            }
         }
 
-        if (collision.CompareTag("EatArea"))
+        if (gameObject.tag == "Enemy" && collision.CompareTag("EatArea"))
+        {
+            OnEated?.Invoke();
+            PlayDeathAnimation();
+        }
+
+        if (gameObject.tag == "EnemyCursed" && collision.CompareTag("EatArea"))
         {
             OnPlayerCollide?.Invoke();
+            OnCursedEffect?.Invoke();
             PlayDeathAnimation();
+            //* cursed explosion sound/effect here
+            
+            PlayerBaseStats playerStats = collision.GetComponent<PlayerBaseStats>();
+            if (playerStats != null)
+            {
+                playerStats.Health -= 1;
+            }
+            else
+            {
+                Debug.LogWarning("Player collider doesn't have PlayerBaseStats component!");
+            }
         }
     }
 
     public void PlayDeathAnimation()
     {
+        // Set dying state to prevent other animations from interfering
+        isDying = true;
+        
         // disable collider
         boxCollider.enabled = false;
 
@@ -167,6 +231,22 @@ public class Enemy : MonoBehaviour
     private void EnemyDeadSound()
     {
         AudioManager.Instance.PlaySound(4);
+    }
+
+    private void FlipSprite(float horizontalMovement)
+    {
+        // If moving right and currently facing left, flip to face right
+        if (horizontalMovement > 0 && !facingRight)
+        {
+            facingRight = true;
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        // If moving left and currently facing right, flip to face left
+        else if (horizontalMovement < 0 && facingRight)
+        {
+            facingRight = false;
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
     #endregion
 }
