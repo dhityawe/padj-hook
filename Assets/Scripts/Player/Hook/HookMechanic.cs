@@ -132,7 +132,7 @@ public class HookMechanic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("EnemyCursed"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("EnemyCursed") || collision.CompareTag("EnemyFever"))
         {
             OnHookEnd?.Invoke();
             hookedEnemy = collision.transform;

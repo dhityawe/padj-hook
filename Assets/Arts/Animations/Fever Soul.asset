@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteAnimations:
   - Name: Move
-    FPS: 5
+    FPS: 6
     Frames:
     - {fileID: 32399116, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
     - {fileID: -1514802373, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
@@ -37,7 +37,7 @@ MonoBehaviour:
     - {fileID: -1573851737, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
     - {fileID: 2112429924, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
     SpriteAnimationType: 0
-  - Name: Death
+  - Name: Dead
     FPS: 6
     Frames:
     - {fileID: 1710641102, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}

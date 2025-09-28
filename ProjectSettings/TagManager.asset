@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - EatArea
   - EnemyCursed
+  - Enemy/Fever
+  - Enemy/Cursed
+  - Enemy/Enemy
+  - EnemyFever
   layers:
   - Default
   - TransparentFX

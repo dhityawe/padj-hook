@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Campfire
   m_EditorClassIdentifier: 
   SpriteAnimations:
-  - Name: Light
+  - Name: Idle
+    FPS: 1
+    Frames:
+    - {fileID: 21300000, guid: c81ee63dc64dcfe4c9a7afcd80ebb7cc, type: 3}
+    SpriteAnimationType: 0
+  - Name: Burn
     FPS: 8
     Frames:
     - {fileID: -161472865, guid: 4d20c5a5ddc137843a568b46d92f6a5f, type: 3}
     - {fileID: -774198861, guid: 4d20c5a5ddc137843a568b46d92f6a5f, type: 3}
     - {fileID: -1063882212, guid: 4d20c5a5ddc137843a568b46d92f6a5f, type: 3}
     - {fileID: -2113292431, guid: 4d20c5a5ddc137843a568b46d92f6a5f, type: 3}
-    SpriteAnimationType: 0
-  - Name: Idle
-    FPS: 0
-    Frames: []
     SpriteAnimationType: 0

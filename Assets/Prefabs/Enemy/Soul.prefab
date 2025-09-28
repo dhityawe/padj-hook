@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1858780989
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 446441651, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteAnimator: {fileID: 5623558969834872195}
+  currentAnimData: {fileID: 11400000, guid: 44a494483bb12a4448105ccc71e2e970, type: 2}
+  feverAnimData: {fileID: 11400000, guid: 85acb6891f856814aad5738ff98f2941, type: 2}
   waypoint: {fileID: 5597343601677629222}
   speed: 1
 --- !u!61 &3235497544541110452

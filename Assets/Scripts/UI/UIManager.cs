@@ -15,9 +15,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private int shakeVibrato = 10;
     private bool isShaking = false;
 
+    [Header("Panel Reference")]
+    [SerializeField] private GameObject gameOverPanel;
+
+    [SerializeField] private ScoreManager scoreManager;
+
     private void OnEnable()
-    {   
+    {
         Enemy.OnPlayerCollide += ScreenShake;
+        PlayerBaseStats.OnGameOver += ShowGameOverPanel;
         // Ensure CooldownManager is initialized before subscribing
         if (CooldownManager.Instance != null)
         {
@@ -34,6 +40,7 @@ public class UIManager : MonoBehaviour
     {
         // Unsubscribe to avoid memory leaks
         Enemy.OnPlayerCollide -= ScreenShake;
+        PlayerBaseStats.OnGameOver -= ShowGameOverPanel;
         CooldownManager.Instance.OnCooldownStart -= HandleCooldownStart;
     }
 
@@ -55,10 +62,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void ShowGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
+        scoreManager.SaveScore();
+
+    }
+
     private void HandleCooldownStart(string skillName, float currentTime, float duration)
     {
         if (skillName == "Hook")
-        {        
+        {
             hookCooldownSlider.value = Mathf.Lerp(0, 1, currentTime / duration);
         }
 

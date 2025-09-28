@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBaseStats : MonoBehaviour, IHookDataProvider, IEatDataProvider
@@ -21,10 +23,42 @@ public class PlayerBaseStats : MonoBehaviour, IHookDataProvider, IEatDataProvide
     public float EatCooldown => eatCooldown;
     public int Health = 3;
 
+    [SerializeField] private List<GameObject> hp;
+
+    public static Action OnGameOver;
+
+    void OnEnable()
+    {
+        Enemy.OnPlayerCollide += DecrementHp;
+    }
+
+    void OnDisable()
+    {
+        Enemy.OnPlayerCollide -= DecrementHp;
+    }
+
     // Draw hook range in editor
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(HookPoint.transform.position, hookRange);
+    }
+
+    public void DecrementHp()
+    {
+        Health--;
+        if (Health >= 0 && Health < hp.Count)
+        {
+            hp[Health].SetActive(false);
+        }
+        CheckHp(); // Call CheckHp to trigger game over if health is 0
+    }
+
+    public void CheckHp()
+    {
+        if (Health <= 0)
+        {
+            OnGameOver?.Invoke();
+        }
     }
 }
