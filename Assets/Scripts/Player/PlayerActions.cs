@@ -131,24 +131,26 @@ public class PlayerActions : MonoBehaviour
                     .SetEase(Ease.InOutQuad);
             });
         
-        // Improved screen zoom effect for satisfying eat feedback
+        // Improved screen zoom effect with better synchronization
         if (Camera.main != null)
         {
-            // Kill any existing camera tweens to prevent conflicts
-            Camera.main.DOKill();
+            // Kill any existing camera tweens completely to prevent stacking
+            Camera.main.DOKill(true); // Complete kill including callbacks
             
-            // Force camera back to original size first to prevent accumulation
+            // Always reset to original size first to ensure consistency
             Camera.main.orthographicSize = originalCameraSize;
             
-            Camera.main.DOOrthoSize(originalCameraSize * 0.95f, 0.025f) // Zoom in slightly
-                .SetEase(Ease.OutQuad)
-                .OnComplete(() => {
-                    if (Camera.main != null) // Safety check in case camera changes
-                    {
-                        Camera.main.DOOrthoSize(originalCameraSize, 0.15f) // Zoom back to TRUE original size
-                            .SetEase(Ease.InOutQuad);
-                    }
-                });
+            // Create a single, atomic zoom sequence that can't be interrupted
+            Sequence zoomSequence = DOTween.Sequence();
+            zoomSequence.Append(Camera.main.DOOrthoSize(originalCameraSize * 0.95f, 0.025f).SetEase(Ease.OutQuad))
+                       .Append(Camera.main.DOOrthoSize(originalCameraSize, 0.15f).SetEase(Ease.InOutQuad))
+                       .OnComplete(() => {
+                           // Ensure we're exactly at original size when done
+                           if (Camera.main != null)
+                           {
+                               Camera.main.orthographicSize = originalCameraSize;
+                           }
+                       });
         }
     }
 

@@ -44,4 +44,4 @@ MonoBehaviour:
     - {fileID: -2114023830, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
     - {fileID: -174195225, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
     - {fileID: 86677431, guid: cdbb8085babdc9840a4ad38de23feeff, type: 3}
-    SpriteAnimationType: 0
+    SpriteAnimationType: 1

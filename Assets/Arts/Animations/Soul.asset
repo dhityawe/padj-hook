@@ -42,4 +42,4 @@ MonoBehaviour:
     - {fileID: 1578803629, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
     - {fileID: -2125579384, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
     - {fileID: -1671987501, guid: c19309e51edf64f4caa142560f100b2d, type: 3}
-    SpriteAnimationType: 0
+    SpriteAnimationType: 1

@@ -291,21 +291,12 @@ public class Enemy : MonoBehaviour
 
         // disable collider
         boxCollider.enabled = false;
-
-        // Play death animation and wait for it to complete before calling EnemyKill
-        if (spriteAnimator != null && spriteAnimator.HasAnimation("Dead"))
+        EnemyDeadSound();
+        spriteAnimator.Play("Dead").SetOnComplete(() =>
         {
-            EnemyDeadSound();
-            spriteAnimator.Play("Dead").SetOnComplete(() =>
-            {
-                // Death animation completed, now kill the enemy
-                EnemyKill();
-            });
-        }
-        else
-        {
+            // Death animation completed, now kill the enemy
             EnemyKill();
-        }
+        });
     }
 
     #region Sound Methods
@@ -360,37 +351,40 @@ public class Enemy : MonoBehaviour
     #endregion
 
     #region Helper Methods
-    
+
     private void ApplyFeverEffects()
     {
-        if (spriteAnimator == null || feverAnimData == null) return;
-        
-        // Change to fever animation
-        string currentAnimName = spriteAnimator.CurrentAnimation?.Name ?? "Idle";
-        spriteAnimator.ChangeAnimationObject(feverAnimData);
-        
-        if (spriteAnimator.HasAnimation(currentAnimName))
+        if (!isDying)
         {
-            spriteAnimator.Play(currentAnimName);
-        }
-        else
-        {
-            spriteAnimator.Play("Idle");
-        }
-        
-        // Apply fever effects
-        StartRGBAnimation();
-        
-        if (!hasFeverSpeed)
-        {
-            speed = originalSpeed * 2f;
-            hasFeverSpeed = true;
-        }
-        
-        if (!hasFeverTag)
-        {
-            gameObject.tag = "EnemyFever";
-            hasFeverTag = true;
+            if (spriteAnimator == null || feverAnimData == null) return;
+
+            // Change to fever animation
+            string currentAnimName = spriteAnimator.CurrentAnimation?.Name ?? "Idle";
+            spriteAnimator.ChangeAnimationObject(feverAnimData);
+
+            if (spriteAnimator.HasAnimation(currentAnimName))
+            {
+                spriteAnimator.Play(currentAnimName);
+            }
+            else
+            {
+                spriteAnimator.Play("Idle");
+            }
+
+            // Apply fever effects
+            StartRGBAnimation();
+
+            if (!hasFeverSpeed)
+            {
+                speed = originalSpeed * 2f;
+                hasFeverSpeed = true;
+            }
+
+            if (!hasFeverTag)
+            {
+                gameObject.tag = "EnemyFever";
+                hasFeverTag = true;
+            }
         }
     }
     
@@ -454,32 +448,35 @@ public class Enemy : MonoBehaviour
 
     public void OnFeverEndEffects()
     {
-        if (spriteAnimator != null && currentAnimData != null)
+        if (!isDying)
         {
-            // Revert back to original animation data
-            string currentAnimName = spriteAnimator.CurrentAnimation?.Name;
-            spriteAnimator.ChangeAnimationObject(currentAnimData);
-            
-            if (!string.IsNullOrEmpty(currentAnimName) && spriteAnimator.HasAnimation(currentAnimName))
+            if (spriteAnimator != null && currentAnimData != null)
             {
-                spriteAnimator.Play(currentAnimName);
-            }
-            
-            // Stop RGB animation and restore original color
-            StopRGBAnimation();
-            
-            // Restore original speed
-            if (hasFeverSpeed)
-            {
-                speed = originalSpeed;
-                hasFeverSpeed = false;
-            }
-            
-            // Restore original tag
-            if (hasFeverTag)
-            {
-                gameObject.tag = originalTag;
-                hasFeverTag = false;
+                // Revert back to original animation data
+                string currentAnimName = spriteAnimator.CurrentAnimation?.Name;
+                spriteAnimator.ChangeAnimationObject(currentAnimData);
+                
+                if (!string.IsNullOrEmpty(currentAnimName) && spriteAnimator.HasAnimation(currentAnimName))
+                {
+                    spriteAnimator.Play(currentAnimName);
+                }
+                
+                // Stop RGB animation and restore original color
+                StopRGBAnimation();
+                
+                // Restore original speed
+                if (hasFeverSpeed)
+                {
+                    speed = originalSpeed;
+                    hasFeverSpeed = false;
+                }
+                
+                // Restore original tag
+                if (hasFeverTag)
+                {
+                    gameObject.tag = originalTag;
+                    hasFeverTag = false;
+                }
             }
         }
     }
