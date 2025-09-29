@@ -59,7 +59,10 @@ public class MainMenuManager : MonoBehaviour
         }
         else
         {
-            _leaderboardPanel.SetActive(false);
+            _loginPanel.SetActive(false);
+            _blackOverlay.SetActive(false);
+            _loginQuestionPanel.SetActive(false);
+            _leaderboardPanel.SetActive(true);
         }
     }
 
