@@ -17,7 +17,7 @@ public class GameSceneManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject); // Keep this object across scene loads
     }
-    
+
     // Load scene by name
     public void LoadScene(string sceneName)
     {
@@ -26,7 +26,7 @@ public class GameSceneManager : MonoBehaviour
             Debug.LogWarning("Scene name is null or empty!");
             return;
         }
-        
+
         Debug.Log($"Loading scene: {sceneName}");
         SceneManager.LoadScene(sceneName);
     }

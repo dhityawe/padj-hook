@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic(8, 0.8f, true); // Play the first music track at start
+        PlayMusic(9, 0.8f, true); // Play the first music track at start
     }
 
     public void PlayMusic(int index, float volume = 1.0f, bool loop = true)
