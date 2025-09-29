@@ -55,6 +55,53 @@ namespace Assets.Scripts.Server
             }
             button.interactable = true; // Re-enable button after request completes
         }
+        
+        public IEnumerator PostToLeaderboard(string username, int score, Action<bool, string> callback = null)
+        {
+            PlayerRequest playerRequest = new()
+            {
+                username = username,
+                score = score
+            };
+            
+            Debug.Log($"Posting to leaderboard: {username} with score {score}");
+            string json = JsonUtility.ToJson(playerRequest);
+            Debug.Log("Leaderboard Request JSON: " + json);
+
+            using UnityWebRequest webRequest = new($"{BASE_URL}/leaderboard", "POST");
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+            webRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            webRequest.downloadHandler = new DownloadHandlerBuffer();
+            webRequest.SetRequestHeader("Content-Type", "application/json");
+
+            yield return webRequest.SendWebRequest();
+
+            bool success = false;
+            string message = "";
+
+            switch (webRequest.result)
+            {
+                case UnityWebRequest.Result.Success:
+                    Debug.Log("Score posted to leaderboard successfully: " + webRequest.downloadHandler.text);
+                    success = true;
+                    message = "Score updated in leaderboard!";
+                    break;
+                case UnityWebRequest.Result.ConnectionError:
+                    Debug.LogError("Connection error posting to leaderboard: " + webRequest.error);
+                    message = "Connection error. Please check your internet connection.";
+                    break;
+                case UnityWebRequest.Result.ProtocolError:
+                    Debug.LogError("Error posting to leaderboard: " + webRequest.error);
+                    message = "Error updating leaderboard. Please try again.";
+                    break;
+                default:
+                    Debug.LogError("Unexpected error posting to leaderboard: " + webRequest.error);
+                    message = "Unexpected error occurred.";
+                    break;
+            }
+            
+            callback?.Invoke(success, message);
+        }
     }
 
 }

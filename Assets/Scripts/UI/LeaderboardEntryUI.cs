@@ -14,8 +14,27 @@ namespace Assets.Scripts.UI
         [SerializeField] private string defaultUsername = "???";
         [SerializeField] private string defaultScore = "???";
         
+        [Header("Loading Animation")]
+        [SerializeField] private TextAnimation textAnimation;
+        [SerializeField] private string loadingUsernameText = "Loading...";
+        [SerializeField] private string loadingScoreText = "...";
+        
+        private bool isLoading = false;
+        
+        private void Awake()
+        {
+            // Get TextAnimation component if not assigned
+            if (textAnimation == null)
+            {
+                textAnimation = GetComponent<TextAnimation>();
+            }
+        }
+        
         public void SetEntry(LeaderboardEntry entry)
         {
+            // Stop loading animation if running
+            StopLoadingAnimation();
+            
             if (entry == null)
             {
                 SetDefaultValues();
@@ -38,6 +57,7 @@ namespace Assets.Scripts.UI
         
         public void SetDefaultValues()
         {
+            StopLoadingAnimation();
             usernameText.text = defaultUsername;
             scoreText.text = defaultScore;
         }
@@ -45,6 +65,43 @@ namespace Assets.Scripts.UI
         public void Clear()
         {
             SetDefaultValues();
+        }
+        
+        public void StartLoadingAnimation()
+        {
+            if (isLoading) return;
+            
+            isLoading = true;
+            
+            // Start text animation for both username and score
+            if (textAnimation != null)
+            {
+                textAnimation.StartAnimation(usernameText, loadingUsernameText);
+                textAnimation.StartAnimation(scoreText, loadingScoreText);
+            }
+            else
+            {
+                // Fallback: just set loading text without animation
+                usernameText.text = loadingUsernameText;
+                scoreText.text = loadingScoreText;
+            }
+        }
+        
+        public void StopLoadingAnimation()
+        {
+            if (!isLoading) return;
+            
+            isLoading = false;
+            
+            if (textAnimation != null)
+            {
+                textAnimation.StopAnimation();
+            }
+        }
+        
+        public bool IsLoading()
+        {
+            return isLoading;
         }
     }
 }

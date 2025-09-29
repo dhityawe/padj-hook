@@ -28,6 +28,9 @@ namespace Assets.Scripts.UI
         {
             if (autoRefreshOnEnable)
             {
+                // Start loading animation before fetching leaderboard
+                StartLoadingAnimation();
+                
                 // fetching leaderboard
                 StartCoroutine(Leaderboard.GetLeaderboard(OnLeaderboardSuccess, OnLeaderboardError));
                 
@@ -66,6 +69,9 @@ namespace Assets.Scripts.UI
         
         private void OnLeaderboardSuccess(List<LeaderboardEntry> entries)
         {
+            // Stop loading animation when data is received
+            StopLoadingAnimation();
+            
             if (entries == null || entries.Count == 0)
             {
                 Debug.LogWarning("Leaderboard data is empty");
@@ -94,6 +100,8 @@ namespace Assets.Scripts.UI
         
         private void OnLeaderboardError(string errorMessage)
         {
+            // Stop loading animation on error
+            StopLoadingAnimation();
             Debug.LogError($"Leaderboard error: {errorMessage}");
             SetAllEntriesToDefault();
         }
@@ -117,6 +125,9 @@ namespace Assets.Scripts.UI
             while (true)
             {
                 yield return new WaitForSeconds(refreshInterval);
+                
+                // Start loading animation before refresh
+                StartLoadingAnimation();
                 StartCoroutine(Leaderboard.GetLeaderboard(OnLeaderboardSuccess, OnLeaderboardError));
             }
         }
@@ -124,6 +135,8 @@ namespace Assets.Scripts.UI
         // Public method to manually refresh leaderboard
         public void RefreshLeaderboard()
         {
+            // Start loading animation before refresh
+            StartLoadingAnimation();
             StartCoroutine(Leaderboard.GetLeaderboard(OnLeaderboardSuccess, OnLeaderboardError));
         }
         
@@ -131,6 +144,36 @@ namespace Assets.Scripts.UI
         public void ClearLeaderboard()
         {
             SetAllEntriesToDefault();
+        }
+        
+        // Method to start loading animation on all entries
+        private void StartLoadingAnimation()
+        {
+            if (leaderboardEntries != null)
+            {
+                foreach (var entry in leaderboardEntries)
+                {
+                    if (entry != null)
+                    {
+                        entry.StartLoadingAnimation();
+                    }
+                }
+            }
+        }
+        
+        // Method to stop loading animation on all entries
+        private void StopLoadingAnimation()
+        {
+            if (leaderboardEntries != null)
+            {
+                foreach (var entry in leaderboardEntries)
+                {
+                    if (entry != null)
+                    {
+                        entry.StopLoadingAnimation();
+                    }
+                }
+            }
         }
     }
 }

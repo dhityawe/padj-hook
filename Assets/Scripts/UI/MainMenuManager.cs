@@ -75,4 +75,9 @@ public class MainMenuManager : MonoBehaviour
     {
         _leaderboardPanel.SetActive(false);
     }
+
+    public void OnBackLeaderboardClicked()
+    {
+        _leaderboardPanel.SetActive(false);
+    }
 }
