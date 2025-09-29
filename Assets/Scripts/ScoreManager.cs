@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         highScore = PlayerSave.GetScore();
+        AudioManager.Instance.PlayMusic(8, 0.8f, true);
     }
 
     void OnDisable()

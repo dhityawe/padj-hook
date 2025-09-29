@@ -66,6 +66,11 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayMusic(9, 0.8f, true);
+    }
+
     private void HandleRegister()
     {
         _leaderboardPanel.SetActive(false);
