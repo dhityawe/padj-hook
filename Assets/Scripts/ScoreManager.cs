@@ -15,7 +15,7 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        highScore = PlayerPrefs.HasKey("score") ? PlayerPrefs.GetInt("score") : 0;
+        highScore = PlayerSave.GetScore();
     }
 
     void OnDisable()
@@ -40,5 +40,6 @@ public class ScoreManager : MonoBehaviour
         {
             highscoreText.text = highScore.ToString();
         }
+        PlayerPrefs.Save();
     }
 }
